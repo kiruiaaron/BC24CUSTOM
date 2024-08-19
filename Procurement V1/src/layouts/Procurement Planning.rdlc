@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="No_ProcurementPlanningHeader">
+          <DataField>No_ProcurementPlanningHeader</DataField>
+        </Field>
+        <Field Name="Name_ProcurementPlanningHeader">
+          <DataField>Name_ProcurementPlanningHeader</DataField>
+        </Field>
+        <Field Name="FinancialYear_ProcurementPlanningHeader">
+          <DataField>FinancialYear_ProcurementPlanningHeader</DataField>
+        </Field>
+        <Field Name="DocumentDate_ProcurementPlanningHeader">
+          <DataField>DocumentDate_ProcurementPlanningHeader</DataField>
+        </Field>
+        <Field Name="Budget_ProcurementPlanningHeader">
+          <DataField>Budget_ProcurementPlanningHeader</DataField>
+        </Field>
+        <Field Name="BudgetDescription_ProcurementPlanningHeader">
+          <DataField>BudgetDescription_ProcurementPlanningHeader</DataField>
+        </Field>
+        <Field Name="UserID_ProcurementPlanningHeader">
+          <DataField>UserID_ProcurementPlanningHeader</DataField>
+        </Field>
+        <Field Name="NoSeries_ProcurementPlanningHeader">
+          <DataField>NoSeries_ProcurementPlanningHeader</DataField>
+        </Field>
+        <Field Name="GlobalDimension1Code_ProcurementPlanningHeader">
+          <DataField>GlobalDimension1Code_ProcurementPlanningHeader</DataField>
+        </Field>
+        <Field Name="GlobalDimension2Code_ProcurementPlanningHeader">
+          <DataField>GlobalDimension2Code_ProcurementPlanningHeader</DataField>
+        </Field>
+        <Field Name="ShortcutDimension3Code_ProcurementPlanningHeader">
+          <DataField>ShortcutDimension3Code_ProcurementPlanningHeader</DataField>
+        </Field>
+        <Field Name="ShortcutDimension4Code_ProcurementPlanningHeader">
+          <DataField>ShortcutDimension4Code_ProcurementPlanningHeader</DataField>
+        </Field>
+        <Field Name="ShortcutDimension5Code_ProcurementPlanningHeader">
+          <DataField>ShortcutDimension5Code_ProcurementPlanningHeader</DataField>
+        </Field>
+        <Field Name="ShortcutDimension6Code_ProcurementPlanningHeader">
+          <DataField>ShortcutDimension6Code_ProcurementPlanningHeader</DataField>
+        </Field>
+        <Field Name="ShortcutDimension7Code_ProcurementPlanningHeader">
+          <DataField>ShortcutDimension7Code_ProcurementPlanningHeader</DataField>
+        </Field>
+        <Field Name="ShortcutDimension8Code_ProcurementPlanningHeader">
+          <DataField>ShortcutDimension8Code_ProcurementPlanningHeader</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Name">
+          <DataField>CompanyInfo_Name</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Address">
+          <DataField>CompanyInfo_Address</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Address2">
+          <DataField>CompanyInfo_Address2</DataField>
+        </Field>
+        <Field Name="pic">
+          <DataField>pic</DataField>
+        </Field>
+        <Field Name="CompanyInfo_City">
+          <DataField>CompanyInfo_City</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Phone">
+          <DataField>CompanyInfo_Phone</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Fax">
+          <DataField>CompanyInfo_Fax</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Picture">
+          <DataField>CompanyInfo_Picture</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Email">
+          <DataField>CompanyInfo_Email</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Web">
+          <DataField>CompanyInfo_Web</DataField>
+        </Field>
+        <Field Name="LN">
+          <DataField>LN</DataField>
+        </Field>
+        <Field Name="DocumentNo_ProcurementPlanningLine">
+          <DataField>DocumentNo_ProcurementPlanningLine</DataField>
+        </Field>
+        <Field Name="LineNo_ProcurementPlanningLine">
+          <DataField>LineNo_ProcurementPlanningLine</DataField>
+        </Field>
+        <Field Name="Type_ProcurementPlanningLine">
+          <DataField>Type_ProcurementPlanningLine</DataField>
+        </Field>
+        <Field Name="No_ProcurementPlanningLine">
+          <DataField>No_ProcurementPlanningLine</DataField>
+        </Field>
+        <Field Name="Description_ProcurementPlanningLine">
+          <DataField>Description_ProcurementPlanningLine</DataField>
+        </Field>
+        <Field Name="Description2_ProcurementPlanningLine">
+          <DataField>Description2_ProcurementPlanningLine</DataField>
+        </Field>
+        <Field Name="UnitofMeasure_ProcurementPlanningLine">
+          <DataField>UnitofMeasure_ProcurementPlanningLine</DataField>
+        </Field>
+        <Field Name="Quantity_ProcurementPlanningLine">
+          <DataField>Quantity_ProcurementPlanningLine</DataField>
+        </Field>
+        <Field Name="Quantity_ProcurementPlanningLineFormat">
+          <DataField>Quantity_ProcurementPlanningLineFormat</DataField>
+        </Field>
+        <Field Name="ProcurementMethod_ProcurementPlanningLine">
+          <DataField>ProcurementMethod_ProcurementPlanningLine</DataField>
+        </Field>
+        <Field Name="SourceofFunds_ProcurementPlanningLine">
+          <DataField>SourceofFunds_ProcurementPlanningLine</DataField>
+        </Field>
+        <Field Name="Estimatedcost_ProcurementPlanningLine">
+          <DataField>Estimatedcost_ProcurementPlanningLine</DataField>
+        </Field>
+        <Field Name="Estimatedcost_ProcurementPlanningLineFormat">
+          <DataField>Estimatedcost_ProcurementPlanningLineFormat</DataField>
+        </Field>
+        <Field Name="TimeProcess_ProcurementPlanningLine">
+          <DataField>TimeProcess_ProcurementPlanningLine</DataField>
+        </Field>
+        <Field Name="InviteAdvertiseTender_ProcurementPlanningLine">
+          <DataField>InviteAdvertiseTender_ProcurementPlanningLine</DataField>
+        </Field>
+        <Field Name="OpenTenderDate_ProcurementPlanningLine">
+          <DataField>OpenTenderDate_ProcurementPlanningLine</DataField>
+        </Field>
+        <Field Name="EvaluateTenderDate_ProcurementPlanningLine">
+          <DataField>EvaluateTenderDate_ProcurementPlanningLine</DataField>
+        </Field>
+        <Field Name="CommitteeAwardApprovalDate_ProcurementPlanningLine">
+          <DataField>CommitteeAwardApprovalDate_ProcurementPlanningLine</DataField>
+        </Field>
+        <Field Name="NotificationofAwardDate_ProcurementPlanningLine">
+          <DataField>NotificationofAwardDate_ProcurementPlanningLine</DataField>
+        </Field>
+        <Field Name="ContractSigningDate_ProcurementPlanningLine">
+          <DataField>ContractSigningDate_ProcurementPlanningLine</DataField>
+        </Field>
+        <Field Name="TotaltimetoContractsign_ProcurementPlanningLine">
+          <DataField>TotaltimetoContractsign_ProcurementPlanningLine</DataField>
+        </Field>
+        <Field Name="TimeofCompletionofContract_ProcurementPlanningLine">
+          <DataField>TimeofCompletionofContract_ProcurementPlanningLine</DataField>
+        </Field>
+        <Field Name="OpenTenderDays_ProcurementPlanningLine">
+          <DataField>OpenTenderDays_ProcurementPlanningLine</DataField>
+        </Field>
+        <Field Name="EvaluateTenderDays_ProcurementPlanningLine">
+          <DataField>EvaluateTenderDays_ProcurementPlanningLine</DataField>
+        </Field>
+        <Field Name="CommitteeAwardApprovalDays_ProcurementPlanningLine">
+          <DataField>CommitteeAwardApprovalDays_ProcurementPlanningLine</DataField>
+        </Field>
+        <Field Name="NotificationofAwardDays_ProcurementPlanningLine">
+          <DataField>NotificationofAwardDays_ProcurementPlanningLine</DataField>
+        </Field>
+        <Field Name="ContractSigningDays_ProcurementPlanningLine">
+          <DataField>ContractSigningDays_ProcurementPlanningLine</DataField>
+        </Field>
+        <Field Name="GlobalDimension1Code_ProcurementPlanningLine">
+          <DataField>GlobalDimension1Code_ProcurementPlanningLine</DataField>
+        </Field>
+        <Field Name="GlobalDimension2Code_ProcurementPlanningLine">
+          <DataField>GlobalDimension2Code_ProcurementPlanningLine</DataField>
+        </Field>
+        <Field Name="ShortcutDimension3Code_ProcurementPlanningLine">
+          <DataField>ShortcutDimension3Code_ProcurementPlanningLine</DataField>
+        </Field>
+        <Field Name="ShortcutDimension4Code_ProcurementPlanningLine">
+          <DataField>ShortcutDimension4Code_ProcurementPlanningLine</DataField>
+        </Field>
+        <Field Name="ShortcutDimension5Code_ProcurementPlanningLine">
+          <DataField>ShortcutDimension5Code_ProcurementPlanningLine</DataField>
+        </Field>
+        <Field Name="ShortcutDimension6Code_ProcurementPlanningLine">
+          <DataField>ShortcutDimension6Code_ProcurementPlanningLine</DataField>
+        </Field>
+        <Field Name="ShortcutDimension7Code_ProcurementPlanningLine">
+          <DataField>ShortcutDimension7Code_ProcurementPlanningLine</DataField>
+        </Field>
+        <Field Name="ShortcutDimension8Code_ProcurementPlanningLine">
+          <DataField>ShortcutDimension8Code_ProcurementPlanningLine</DataField>
+        </Field>
+        <Field Name="ResponsibilityCenter_ProcurementPlanningLine">
+          <DataField>ResponsibilityCenter_ProcurementPlanningLine</DataField>
+        </Field>
+        <Field Name="SequenceNo">
+          <DataField>SequenceNo</DataField>
+        </Field>
+        <Field Name="LastDateTimeModified">
+          <DataField>LastDateTimeModified</DataField>
+        </Field>
+        <Field Name="ApproverID">
+          <DataField>ApproverID</DataField>
+        </Field>
+        <Field Name="ApproverID_ApprovalEntry">
+          <DataField>ApproverID_ApprovalEntry</DataField>
+        </Field>
+        <Field Name="SenderID">
+          <DataField>SenderID</DataField>
+        </Field>
+        <Field Name="EmployeeFirstName">
+          <DataField>EmployeeFirstName</DataField>
+        </Field>
+        <Field Name="EmployeeMiddleName">
+          <DataField>EmployeeMiddleName</DataField>
+        </Field>
+        <Field Name="EmployeeLastName">
+          <DataField>EmployeeLastName</DataField>
+        </Field>
+        <Field Name="EmployeeSignature">
+          <DataField>EmployeeSignature</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

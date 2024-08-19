@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="HEADER_1_">
+          <DataField>HEADER_1_</DataField>
+        </Field>
+        <Field Name="HEADER_2_">
+          <DataField>HEADER_2_</DataField>
+        </Field>
+        <Field Name="HEADER_3_">
+          <DataField>HEADER_3_</DataField>
+        </Field>
+        <Field Name="HEADER_4_">
+          <DataField>HEADER_4_</DataField>
+        </Field>
+        <Field Name="HEADER_5_">
+          <DataField>HEADER_5_</DataField>
+        </Field>
+        <Field Name="HEADER_6_">
+          <DataField>HEADER_6_</DataField>
+        </Field>
+        <Field Name="TOTAL_">
+          <DataField>TOTAL_</DataField>
+        </Field>
+        <Field Name="HEADER_12_">
+          <DataField>HEADER_12_</DataField>
+        </Field>
+        <Field Name="HEADER_11_">
+          <DataField>HEADER_11_</DataField>
+        </Field>
+        <Field Name="HEADER_10_">
+          <DataField>HEADER_10_</DataField>
+        </Field>
+        <Field Name="HEADER_9_">
+          <DataField>HEADER_9_</DataField>
+        </Field>
+        <Field Name="HEADER_8_">
+          <DataField>HEADER_8_</DataField>
+        </Field>
+        <Field Name="HEADER_7_">
+          <DataField>HEADER_7_</DataField>
+        </Field>
+        <Field Name="FOR_YEAR______FORMAT_Year_">
+          <DataField>FOR_YEAR______FORMAT_Year_</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENO">
+          <DataField>CurrReport_PAGENO</DataField>
+        </Field>
+        <Field Name="NSSFMonthAmt_1_">
+          <DataField>NSSFMonthAmt_1_</DataField>
+        </Field>
+        <Field Name="NSSFMonthAmt_1_Format">
+          <DataField>NSSFMonthAmt_1_Format</DataField>
+        </Field>
+        <Field Name="NSSFMonthAmt_2_">
+          <DataField>NSSFMonthAmt_2_</DataField>
+        </Field>
+        <Field Name="NSSFMonthAmt_2_Format">
+          <DataField>NSSFMonthAmt_2_Format</DataField>
+        </Field>
+        <Field Name="NSSFMonthAmt_3_">
+          <DataField>NSSFMonthAmt_3_</DataField>
+        </Field>
+        <Field Name="NSSFMonthAmt_3_Format">
+          <DataField>NSSFMonthAmt_3_Format</DataField>
+        </Field>
+        <Field Name="NSSFMonthAmt_4_">
+          <DataField>NSSFMonthAmt_4_</DataField>
+        </Field>
+        <Field Name="NSSFMonthAmt_4_Format">
+          <DataField>NSSFMonthAmt_4_Format</DataField>
+        </Field>
+        <Field Name="NSSFMonthAmt_5_">
+          <DataField>NSSFMonthAmt_5_</DataField>
+        </Field>
+        <Field Name="NSSFMonthAmt_5_Format">
+          <DataField>NSSFMonthAmt_5_Format</DataField>
+        </Field>
+        <Field Name="NSSFMonthAmt_12_">
+          <DataField>NSSFMonthAmt_12_</DataField>
+        </Field>
+        <Field Name="NSSFMonthAmt_12_Format">
+          <DataField>NSSFMonthAmt_12_Format</DataField>
+        </Field>
+        <Field Name="NSSFMonthAmt_11_">
+          <DataField>NSSFMonthAmt_11_</DataField>
+        </Field>
+        <Field Name="NSSFMonthAmt_11_Format">
+          <DataField>NSSFMonthAmt_11_Format</DataField>
+        </Field>
+        <Field Name="NSSFMonthAmt_10_">
+          <DataField>NSSFMonthAmt_10_</DataField>
+        </Field>
+        <Field Name="NSSFMonthAmt_10_Format">
+          <DataField>NSSFMonthAmt_10_Format</DataField>
+        </Field>
+        <Field Name="NSSFMonthAmt_9_">
+          <DataField>NSSFMonthAmt_9_</DataField>
+        </Field>
+        <Field Name="NSSFMonthAmt_9_Format">
+          <DataField>NSSFMonthAmt_9_Format</DataField>
+        </Field>
+        <Field Name="NSSFMonthAmt_8_">
+          <DataField>NSSFMonthAmt_8_</DataField>
+        </Field>
+        <Field Name="NSSFMonthAmt_8_Format">
+          <DataField>NSSFMonthAmt_8_Format</DataField>
+        </Field>
+        <Field Name="NSSFMonthAmt_7_">
+          <DataField>NSSFMonthAmt_7_</DataField>
+        </Field>
+        <Field Name="NSSFMonthAmt_7_Format">
+          <DataField>NSSFMonthAmt_7_Format</DataField>
+        </Field>
+        <Field Name="DataItem1101951051">
+          <DataField>DataItem1101951051</DataField>
+        </Field>
+        <Field Name="DataItem1101951051Format">
+          <DataField>DataItem1101951051Format</DataField>
+        </Field>
+        <Field Name="First_Name___________Middle_Name___________Last_Name_">
+          <DataField>First_Name___________Middle_Name___________Last_Name_</DataField>
+        </Field>
+        <Field Name="NSSFMonthAmt_6_">
+          <DataField>NSSFMonthAmt_6_</DataField>
+        </Field>
+        <Field Name="NSSFMonthAmt_6_Format">
+          <DataField>NSSFMonthAmt_6_Format</DataField>
+        </Field>
+        <Field Name="Employee__Social_Security_No__">
+          <DataField>Employee__Social_Security_No__</DataField>
+        </Field>
+        <Field Name="Employee__No__">
+          <DataField>Employee__No__</DataField>
+        </Field>
+        <Field Name="NSSFMonthAmt_1__Control1101951100">
+          <DataField>NSSFMonthAmt_1__Control1101951100</DataField>
+        </Field>
+        <Field Name="NSSFMonthAmt_1__Control1101951100Format">
+          <DataField>NSSFMonthAmt_1__Control1101951100Format</DataField>
+        </Field>
+        <Field Name="NSSFMonthAmt_2__Control1101951101">
+          <DataField>NSSFMonthAmt_2__Control1101951101</DataField>
+        </Field>
+        <Field Name="NSSFMonthAmt_2__Control1101951101Format">
+          <DataField>NSSFMonthAmt_2__Control1101951101Format</DataField>
+        </Field>
+        <Field Name="NSSFMonthAmt_3__Control1101951102">
+          <DataField>NSSFMonthAmt_3__Control1101951102</DataField>
+        </Field>
+        <Field Name="NSSFMonthAmt_3__Control1101951102Format">
+          <DataField>NSSFMonthAmt_3__Control1101951102Format</DataField>
+        </Field>
+        <Field Name="NSSFMonthAmt_4__Control1101951103">
+          <DataField>NSSFMonthAmt_4__Control1101951103</DataField>
+        </Field>
+        <Field Name="NSSFMonthAmt_4__Control1101951103Format">
+          <DataField>NSSFMonthAmt_4__Control1101951103Format</DataField>
+        </Field>
+        <Field Name="NSSFMonthAmt_5__Control1101951104">
+          <DataField>NSSFMonthAmt_5__Control1101951104</DataField>
+        </Field>
+        <Field Name="NSSFMonthAmt_5__Control1101951104Format">
+          <DataField>NSSFMonthAmt_5__Control1101951104Format</DataField>
+        </Field>
+        <Field Name="NSSFMonthAmt_12__Control1101951112">
+          <DataField>NSSFMonthAmt_12__Control1101951112</DataField>
+        </Field>
+        <Field Name="NSSFMonthAmt_12__Control1101951112Format">
+          <DataField>NSSFMonthAmt_12__Control1101951112Format</DataField>
+        </Field>
+        <Field Name="NSSFMonthAmt_11__Control1101951113">
+          <DataField>NSSFMonthAmt_11__Control1101951113</DataField>
+        </Field>
+        <Field Name="NSSFMonthAmt_11__Control1101951113Format">
+          <DataField>NSSFMonthAmt_11__Control1101951113Format</DataField>
+        </Field>
+        <Field Name="NSSFMonthAmt_10__Control1101951115">
+          <DataField>NSSFMonthAmt_10__Control1101951115</DataField>
+        </Field>
+        <Field Name="NSSFMonthAmt_10__Control1101951115Format">
+          <DataField>NSSFMonthAmt_10__Control1101951115Format</DataField>
+        </Field>
+        <Field Name="NSSFMonthAmt_9__Control1101951118">
+          <DataField>NSSFMonthAmt_9__Control1101951118</DataField>
+        </Field>
+        <Field Name="NSSFMonthAmt_9__Control1101951118Format">
+          <DataField>NSSFMonthAmt_9__Control1101951118Format</DataField>
+        </Field>
+        <Field Name="NSSFMonthAmt_8__Control1101951120">
+          <DataField>NSSFMonthAmt_8__Control1101951120</DataField>
+        </Field>
+        <Field Name="NSSFMonthAmt_8__Control1101951120Format">
+          <DataField>NSSFMonthAmt_8__Control1101951120Format</DataField>
+        </Field>
+        <Field Name="NSSFMonthAmt_7__Control1101951121">
+          <DataField>NSSFMonthAmt_7__Control1101951121</DataField>
+        </Field>
+        <Field Name="NSSFMonthAmt_7__Control1101951121Format">
+          <DataField>NSSFMonthAmt_7__Control1101951121Format</DataField>
+        </Field>
+        <Field Name="DataItem1101951124">
+          <DataField>DataItem1101951124</DataField>
+        </Field>
+        <Field Name="DataItem1101951124Format">
+          <DataField>DataItem1101951124Format</DataField>
+        </Field>
+        <Field Name="NSSFMonthAmt_6__Control1101951126">
+          <DataField>NSSFMonthAmt_6__Control1101951126</DataField>
+        </Field>
+        <Field Name="NSSFMonthAmt_6__Control1101951126Format">
+          <DataField>NSSFMonthAmt_6__Control1101951126Format</DataField>
+        </Field>
+        <Field Name="NSSF_YEARLY_REPORTCaption">
+          <DataField>NSSF_YEARLY_REPORTCaption</DataField>
+        </Field>
+        <Field Name="NAMECaption">
+          <DataField>NAMECaption</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENOCaption">
+          <DataField>CurrReport_PAGENOCaption</DataField>
+        </Field>
+        <Field Name="Emp_No_Caption">
+          <DataField>Emp_No_Caption</DataField>
+        </Field>
+        <Field Name="NSSF_NO_Caption">
+          <DataField>NSSF_NO_Caption</DataField>
+        </Field>
+        <Field Name="TOTALSCaption">
+          <DataField>TOTALSCaption</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

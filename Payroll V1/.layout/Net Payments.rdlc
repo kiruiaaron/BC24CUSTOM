@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="CurrReport_PAGENO">
+          <DataField>CurrReport_PAGENO</DataField>
+        </Field>
+        <Field Name="TitleText">
+          <DataField>TitleText</DataField>
+        </Field>
+        <Field Name="Description_______">
+          <DataField>Description_______</DataField>
+        </Field>
+        <Field Name="Periods_Status">
+          <DataField>Periods_Status</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENOCaption">
+          <DataField>CurrReport_PAGENOCaption</DataField>
+        </Field>
+        <Field Name="Amount__LCY_Caption">
+          <DataField>Amount__LCY_Caption</DataField>
+        </Field>
+        <Field Name="NameCaption">
+          <DataField>NameCaption</DataField>
+        </Field>
+        <Field Name="Total_Deduction__LCY_Caption">
+          <DataField>Total_Deduction__LCY_Caption</DataField>
+        </Field>
+        <Field Name="Total_Payable__LCY_Caption">
+          <DataField>Total_Payable__LCY_Caption</DataField>
+        </Field>
+        <Field Name="No_Caption">
+          <DataField>No_Caption</DataField>
+        </Field>
+        <Field Name="Periods_Period_ID">
+          <DataField>Periods_Period_ID</DataField>
+        </Field>
+        <Field Name="Periods_Period_Month">
+          <DataField>Periods_Period_Month</DataField>
+        </Field>
+        <Field Name="Periods_Period_Year">
+          <DataField>Periods_Period_Year</DataField>
+        </Field>
+        <Field Name="Periods_Payroll_Code">
+          <DataField>Periods_Payroll_Code</DataField>
+        </Field>
+        <Field Name="Employee_No_">
+          <DataField>Employee_No_</DataField>
+        </Field>
+        <Field Name="Amount">
+          <DataField>Amount</DataField>
+        </Field>
+        <Field Name="AmountFormat">
+          <DataField>AmountFormat</DataField>
+        </Field>
+        <Field Name="Payroll_Header__Employee_no__">
+          <DataField>Payroll_Header__Employee_no__</DataField>
+        </Field>
+        <Field Name="Payroll_Header__Total_Payable__LCY__">
+          <DataField>Payroll_Header__Total_Payable__LCY__</DataField>
+        </Field>
+        <Field Name="Payroll_Header__Total_Payable__LCY__Format">
+          <DataField>Payroll_Header__Total_Payable__LCY__Format</DataField>
+        </Field>
+        <Field Name="Payroll_Header__Total_Deduction__LCY__">
+          <DataField>Payroll_Header__Total_Deduction__LCY__</DataField>
+        </Field>
+        <Field Name="Payroll_Header__Total_Deduction__LCY__Format">
+          <DataField>Payroll_Header__Total_Deduction__LCY__Format</DataField>
+        </Field>
+        <Field Name="Name">
+          <DataField>Name</DataField>
+        </Field>
+        <Field Name="Payroll_Header_Payroll_ID">
+          <DataField>Payroll_Header_Payroll_ID</DataField>
+        </Field>
+        <Field Name="TotalAmount">
+          <DataField>TotalAmount</DataField>
+        </Field>
+        <Field Name="TotalAmountFormat">
+          <DataField>TotalAmountFormat</DataField>
+        </Field>
+        <Field Name="Total_Employees____FORMAT_EmpCount_">
+          <DataField>Total_Employees____FORMAT_EmpCount_</DataField>
+        </Field>
+        <Field Name="TotalPayable">
+          <DataField>TotalPayable</DataField>
+        </Field>
+        <Field Name="TotalPayableFormat">
+          <DataField>TotalPayableFormat</DataField>
+        </Field>
+        <Field Name="TotalDeduction">
+          <DataField>TotalDeduction</DataField>
+        </Field>
+        <Field Name="TotalDeductionFormat">
+          <DataField>TotalDeductionFormat</DataField>
+        </Field>
+        <Field Name="Integer_Number">
+          <DataField>Integer_Number</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

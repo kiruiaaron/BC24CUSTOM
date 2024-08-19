@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="AccNo">
+          <DataField>AccNo</DataField>
+        </Field>
+        <Field Name="AccName">
+          <DataField>AccName</DataField>
+        </Field>
+        <Field Name="IncomeBalance">
+          <DataField>IncomeBalance</DataField>
+        </Field>
+        <Field Name="DebitAmt">
+          <DataField>DebitAmt</DataField>
+        </Field>
+        <Field Name="DebitAmtFormat">
+          <DataField>DebitAmtFormat</DataField>
+        </Field>
+        <Field Name="CreditAmt">
+          <DataField>CreditAmt</DataField>
+        </Field>
+        <Field Name="CreditAmtFormat">
+          <DataField>CreditAmtFormat</DataField>
+        </Field>
+        <Field Name="BDAmt">
+          <DataField>BDAmt</DataField>
+        </Field>
+        <Field Name="BDAmtFormat">
+          <DataField>BDAmtFormat</DataField>
+        </Field>
+        <Field Name="CDAmt">
+          <DataField>CDAmt</DataField>
+        </Field>
+        <Field Name="CDAmtFormat">
+          <DataField>CDAmtFormat</DataField>
+        </Field>
+        <Field Name="AccBalance">
+          <DataField>AccBalance</DataField>
+        </Field>
+        <Field Name="AccBalanceFormat">
+          <DataField>AccBalanceFormat</DataField>
+        </Field>
+        <Field Name="BudgetedAmt">
+          <DataField>BudgetedAmt</DataField>
+        </Field>
+        <Field Name="BudgetedAmtFormat">
+          <DataField>BudgetedAmtFormat</DataField>
+        </Field>
+        <Field Name="Logo">
+          <DataField>Logo</DataField>
+        </Field>
+        <Field Name="ActualExpenditure">
+          <DataField>ActualExpenditure</DataField>
+        </Field>
+        <Field Name="ActualExpenditureFormat">
+          <DataField>ActualExpenditureFormat</DataField>
+        </Field>
+        <Field Name="TotalCommitment">
+          <DataField>TotalCommitment</DataField>
+        </Field>
+        <Field Name="TotalCommitmentFormat">
+          <DataField>TotalCommitmentFormat</DataField>
+        </Field>
+        <Field Name="BudgetedAmount">
+          <DataField>BudgetedAmount</DataField>
+        </Field>
+        <Field Name="BudgetedAmountFormat">
+          <DataField>BudgetedAmountFormat</DataField>
+        </Field>
+        <Field Name="TotalCommAct">
+          <DataField>TotalCommAct</DataField>
+        </Field>
+        <Field Name="TotalCommActFormat">
+          <DataField>TotalCommActFormat</DataField>
+        </Field>
+        <Field Name="Balance">
+          <DataField>Balance</DataField>
+        </Field>
+        <Field Name="BalanceFormat">
+          <DataField>BalanceFormat</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

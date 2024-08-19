@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="HEADER_1_">
+          <DataField>HEADER_1_</DataField>
+        </Field>
+        <Field Name="HEADER_2_">
+          <DataField>HEADER_2_</DataField>
+        </Field>
+        <Field Name="HEADER_3_">
+          <DataField>HEADER_3_</DataField>
+        </Field>
+        <Field Name="HEADER_4_">
+          <DataField>HEADER_4_</DataField>
+        </Field>
+        <Field Name="HEADER_5_">
+          <DataField>HEADER_5_</DataField>
+        </Field>
+        <Field Name="HEADER_6_">
+          <DataField>HEADER_6_</DataField>
+        </Field>
+        <Field Name="TOTAL_">
+          <DataField>TOTAL_</DataField>
+        </Field>
+        <Field Name="HEADER_12_">
+          <DataField>HEADER_12_</DataField>
+        </Field>
+        <Field Name="HEADER_11_">
+          <DataField>HEADER_11_</DataField>
+        </Field>
+        <Field Name="HEADER_10_">
+          <DataField>HEADER_10_</DataField>
+        </Field>
+        <Field Name="HEADER_9_">
+          <DataField>HEADER_9_</DataField>
+        </Field>
+        <Field Name="HEADER_8_">
+          <DataField>HEADER_8_</DataField>
+        </Field>
+        <Field Name="HEADER_7_">
+          <DataField>HEADER_7_</DataField>
+        </Field>
+        <Field Name="FOR_YEAR______FORMAT_Year__________FORMAT_TOYear_">
+          <DataField>FOR_YEAR______FORMAT_Year__________FORMAT_TOYear_</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENO">
+          <DataField>CurrReport_PAGENO</DataField>
+        </Field>
+        <Field Name="NHIFMonthAmt_1_">
+          <DataField>NHIFMonthAmt_1_</DataField>
+        </Field>
+        <Field Name="NHIFMonthAmt_1_Format">
+          <DataField>NHIFMonthAmt_1_Format</DataField>
+        </Field>
+        <Field Name="NHIFMonthAmt_2_">
+          <DataField>NHIFMonthAmt_2_</DataField>
+        </Field>
+        <Field Name="NHIFMonthAmt_2_Format">
+          <DataField>NHIFMonthAmt_2_Format</DataField>
+        </Field>
+        <Field Name="NHIFMonthAmt_3_">
+          <DataField>NHIFMonthAmt_3_</DataField>
+        </Field>
+        <Field Name="NHIFMonthAmt_3_Format">
+          <DataField>NHIFMonthAmt_3_Format</DataField>
+        </Field>
+        <Field Name="NHIFMonthAmt_4_">
+          <DataField>NHIFMonthAmt_4_</DataField>
+        </Field>
+        <Field Name="NHIFMonthAmt_4_Format">
+          <DataField>NHIFMonthAmt_4_Format</DataField>
+        </Field>
+        <Field Name="NHIFMonthAmt_5_">
+          <DataField>NHIFMonthAmt_5_</DataField>
+        </Field>
+        <Field Name="NHIFMonthAmt_5_Format">
+          <DataField>NHIFMonthAmt_5_Format</DataField>
+        </Field>
+        <Field Name="NHIFMonthAmt_12_">
+          <DataField>NHIFMonthAmt_12_</DataField>
+        </Field>
+        <Field Name="NHIFMonthAmt_12_Format">
+          <DataField>NHIFMonthAmt_12_Format</DataField>
+        </Field>
+        <Field Name="NHIFMonthAmt_11_">
+          <DataField>NHIFMonthAmt_11_</DataField>
+        </Field>
+        <Field Name="NHIFMonthAmt_11_Format">
+          <DataField>NHIFMonthAmt_11_Format</DataField>
+        </Field>
+        <Field Name="NHIFMonthAmt_10_">
+          <DataField>NHIFMonthAmt_10_</DataField>
+        </Field>
+        <Field Name="NHIFMonthAmt_10_Format">
+          <DataField>NHIFMonthAmt_10_Format</DataField>
+        </Field>
+        <Field Name="NHIFMonthAmt_9_">
+          <DataField>NHIFMonthAmt_9_</DataField>
+        </Field>
+        <Field Name="NHIFMonthAmt_9_Format">
+          <DataField>NHIFMonthAmt_9_Format</DataField>
+        </Field>
+        <Field Name="NHIFMonthAmt_8_">
+          <DataField>NHIFMonthAmt_8_</DataField>
+        </Field>
+        <Field Name="NHIFMonthAmt_8_Format">
+          <DataField>NHIFMonthAmt_8_Format</DataField>
+        </Field>
+        <Field Name="NHIFMonthAmt_7_">
+          <DataField>NHIFMonthAmt_7_</DataField>
+        </Field>
+        <Field Name="NHIFMonthAmt_7_Format">
+          <DataField>NHIFMonthAmt_7_Format</DataField>
+        </Field>
+        <Field Name="DataItem1101951051">
+          <DataField>DataItem1101951051</DataField>
+        </Field>
+        <Field Name="DataItem1101951051Format">
+          <DataField>DataItem1101951051Format</DataField>
+        </Field>
+        <Field Name="First_Name___________Middle_Name___________Last_Name_">
+          <DataField>First_Name___________Middle_Name___________Last_Name_</DataField>
+        </Field>
+        <Field Name="NHIFMonthAmt_6_">
+          <DataField>NHIFMonthAmt_6_</DataField>
+        </Field>
+        <Field Name="NHIFMonthAmt_6_Format">
+          <DataField>NHIFMonthAmt_6_Format</DataField>
+        </Field>
+        <Field Name="Employee__Membership_No__">
+          <DataField>Employee__Membership_No__</DataField>
+        </Field>
+        <Field Name="Employee__No__">
+          <DataField>Employee__No__</DataField>
+        </Field>
+        <Field Name="DataItem1101951001">
+          <DataField>DataItem1101951001</DataField>
+        </Field>
+        <Field Name="DataItem1101951001Format">
+          <DataField>DataItem1101951001Format</DataField>
+        </Field>
+        <Field Name="NHIFMonthAmt_12__Control1101951010">
+          <DataField>NHIFMonthAmt_12__Control1101951010</DataField>
+        </Field>
+        <Field Name="NHIFMonthAmt_12__Control1101951010Format">
+          <DataField>NHIFMonthAmt_12__Control1101951010Format</DataField>
+        </Field>
+        <Field Name="NHIFMonthAmt_11__Control1101951014">
+          <DataField>NHIFMonthAmt_11__Control1101951014</DataField>
+        </Field>
+        <Field Name="NHIFMonthAmt_11__Control1101951014Format">
+          <DataField>NHIFMonthAmt_11__Control1101951014Format</DataField>
+        </Field>
+        <Field Name="NHIFMonthAmt_10__Control1101951016">
+          <DataField>NHIFMonthAmt_10__Control1101951016</DataField>
+        </Field>
+        <Field Name="NHIFMonthAmt_10__Control1101951016Format">
+          <DataField>NHIFMonthAmt_10__Control1101951016Format</DataField>
+        </Field>
+        <Field Name="NHIFMonthAmt_9__Control1101951020">
+          <DataField>NHIFMonthAmt_9__Control1101951020</DataField>
+        </Field>
+        <Field Name="NHIFMonthAmt_9__Control1101951020Format">
+          <DataField>NHIFMonthAmt_9__Control1101951020Format</DataField>
+        </Field>
+        <Field Name="NHIFMonthAmt_8__Control1101951067">
+          <DataField>NHIFMonthAmt_8__Control1101951067</DataField>
+        </Field>
+        <Field Name="NHIFMonthAmt_8__Control1101951067Format">
+          <DataField>NHIFMonthAmt_8__Control1101951067Format</DataField>
+        </Field>
+        <Field Name="NHIFMonthAmt_7__Control1101951099">
+          <DataField>NHIFMonthAmt_7__Control1101951099</DataField>
+        </Field>
+        <Field Name="NHIFMonthAmt_7__Control1101951099Format">
+          <DataField>NHIFMonthAmt_7__Control1101951099Format</DataField>
+        </Field>
+        <Field Name="NHIFMonthAmt_6__Control1101951101">
+          <DataField>NHIFMonthAmt_6__Control1101951101</DataField>
+        </Field>
+        <Field Name="NHIFMonthAmt_6__Control1101951101Format">
+          <DataField>NHIFMonthAmt_6__Control1101951101Format</DataField>
+        </Field>
+        <Field Name="NHIFMonthAmt_5__Control1101951102">
+          <DataField>NHIFMonthAmt_5__Control1101951102</DataField>
+        </Field>
+        <Field Name="NHIFMonthAmt_5__Control1101951102Format">
+          <DataField>NHIFMonthAmt_5__Control1101951102Format</DataField>
+        </Field>
+        <Field Name="NHIFMonthAmt_4__Control1101951104">
+          <DataField>NHIFMonthAmt_4__Control1101951104</DataField>
+        </Field>
+        <Field Name="NHIFMonthAmt_4__Control1101951104Format">
+          <DataField>NHIFMonthAmt_4__Control1101951104Format</DataField>
+        </Field>
+        <Field Name="NHIFMonthAmt_3__Control1101951107">
+          <DataField>NHIFMonthAmt_3__Control1101951107</DataField>
+        </Field>
+        <Field Name="NHIFMonthAmt_3__Control1101951107Format">
+          <DataField>NHIFMonthAmt_3__Control1101951107Format</DataField>
+        </Field>
+        <Field Name="NHIFMonthAmt_2__Control1101951108">
+          <DataField>NHIFMonthAmt_2__Control1101951108</DataField>
+        </Field>
+        <Field Name="NHIFMonthAmt_2__Control1101951108Format">
+          <DataField>NHIFMonthAmt_2__Control1101951108Format</DataField>
+        </Field>
+        <Field Name="NHIFMonthAmt_1__Control1101951111">
+          <DataField>NHIFMonthAmt_1__Control1101951111</DataField>
+        </Field>
+        <Field Name="NHIFMonthAmt_1__Control1101951111Format">
+          <DataField>NHIFMonthAmt_1__Control1101951111Format</DataField>
+        </Field>
+        <Field Name="NHIF_YEARLY_REPORTCaption">
+          <DataField>NHIF_YEARLY_REPORTCaption</DataField>
+        </Field>
+        <Field Name="NAMECaption">
+          <DataField>NAMECaption</DataField>
+        </Field>
+        <Field Name="NHIF_NO_Caption">
+          <DataField>NHIF_NO_Caption</DataField>
+        </Field>
+        <Field Name="EMP_NO_Caption">
+          <DataField>EMP_NO_Caption</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENOCaption">
+          <DataField>CurrReport_PAGENOCaption</DataField>
+        </Field>
+        <Field Name="TOTALSCaption">
+          <DataField>TOTALSCaption</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

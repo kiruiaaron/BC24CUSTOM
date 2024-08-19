@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="CompanyInformationRec_Picture">
+          <DataField>CompanyInformationRec_Picture</DataField>
+        </Field>
+        <Field Name="No_ProbationReview">
+          <DataField>No_ProbationReview</DataField>
+        </Field>
+        <Field Name="DocumentDate_ProbationReview">
+          <DataField>DocumentDate_ProbationReview</DataField>
+        </Field>
+        <Field Name="EmployeeNo_ProbationReview">
+          <DataField>EmployeeNo_ProbationReview</DataField>
+        </Field>
+        <Field Name="EmployeeName_ProbationReview">
+          <DataField>EmployeeName_ProbationReview</DataField>
+        </Field>
+        <Field Name="Grade_ProbationReview">
+          <DataField>Grade_ProbationReview</DataField>
+        </Field>
+        <Field Name="DepartmentSection_ProbationReview">
+          <DataField>DepartmentSection_ProbationReview</DataField>
+        </Field>
+        <Field Name="DepartmentName_ProbationReview">
+          <DataField>DepartmentName_ProbationReview</DataField>
+        </Field>
+        <Field Name="PostStartDate_ProbationReview">
+          <DataField>PostStartDate_ProbationReview</DataField>
+        </Field>
+        <Field Name="LineManager_ProbationReview">
+          <DataField>LineManager_ProbationReview</DataField>
+        </Field>
+        <Field Name="LineManagerName_ProbationReview">
+          <DataField>LineManagerName_ProbationReview</DataField>
+        </Field>
+        <Field Name="ReviewStage_ProbationReview">
+          <DataField>ReviewStage_ProbationReview</DataField>
+        </Field>
+        <Field Name="NoSeries_ProbationReview">
+          <DataField>NoSeries_ProbationReview</DataField>
+        </Field>
+        <Field Name="JobTitle_">
+          <DataField>JobTitle_</DataField>
+        </Field>
+        <Field Name="MeetingDate_ProbationReviewMeeting">
+          <DataField>MeetingDate_ProbationReviewMeeting</DataField>
+        </Field>
+        <Field Name="Objective_ProbationMeetingObjective">
+          <DataField>Objective_ProbationMeetingObjective</DataField>
+        </Field>
+        <Field Name="DevelopmentPlan_ProbationDevelopmentPlan">
+          <DataField>DevelopmentPlan_ProbationDevelopmentPlan</DataField>
+        </Field>
+        <Field Name="ReviewNo_ProbationFirstReview">
+          <DataField>ReviewNo_ProbationFirstReview</DataField>
+        </Field>
+        <Field Name="FirstReviewDate_ProbationFirstReview">
+          <DataField>FirstReviewDate_ProbationFirstReview</DataField>
+        </Field>
+        <Field Name="PerformanceSummary_ProbationFirstReview">
+          <DataField>PerformanceSummary_ProbationFirstReview</DataField>
+        </Field>
+        <Field Name="ObjectivesMet_ProbationFirstReview">
+          <DataField>ObjectivesMet_ProbationFirstReview</DataField>
+        </Field>
+        <Field Name="TrainingNeedAddressed_ProbationFirstReview">
+          <DataField>TrainingNeedAddressed_ProbationFirstReview</DataField>
+        </Field>
+        <Field Name="TrainingNeedAction_ProbationFirstReview">
+          <DataField>TrainingNeedAction_ProbationFirstReview</DataField>
+        </Field>
+        <Field Name="TrainingNeedReviewDate_ProbationFirstReview">
+          <DataField>TrainingNeedReviewDate_ProbationFirstReview</DataField>
+        </Field>
+        <Field Name="ObjectivesMetAction_ProbationFirstReview">
+          <DataField>ObjectivesMetAction_ProbationFirstReview</DataField>
+        </Field>
+        <Field Name="ObjectiveMetReviewDate_ProbationFirstReview">
+          <DataField>ObjectiveMetReviewDate_ProbationFirstReview</DataField>
+        </Field>
+        <Field Name="AreaOfPerformance_ProbationFirstFinalKPI">
+          <DataField>AreaOfPerformance_ProbationFirstFinalKPI</DataField>
+        </Field>
+        <Field Name="Remarks_ProbationFirstFinalKPI">
+          <DataField>Remarks_ProbationFirstFinalKPI</DataField>
+        </Field>
+        <Field Name="Description_ReviewKPIImprovements">
+          <DataField>Description_ReviewKPIImprovements</DataField>
+        </Field>
+        <Field Name="Description_ReviewKPIConcerns">
+          <DataField>Description_ReviewKPIConcerns</DataField>
+        </Field>
+        <Field Name="ReviewNo_ProbationFinalReview">
+          <DataField>ReviewNo_ProbationFinalReview</DataField>
+        </Field>
+        <Field Name="FinalReviewDate_ProbationFinalReview">
+          <DataField>FinalReviewDate_ProbationFinalReview</DataField>
+        </Field>
+        <Field Name="PerformanceSummary_ProbationFinalReview">
+          <DataField>PerformanceSummary_ProbationFinalReview</DataField>
+        </Field>
+        <Field Name="ObjectivesMet_ProbationFinalReview">
+          <DataField>ObjectivesMet_ProbationFinalReview</DataField>
+        </Field>
+        <Field Name="TrainingNeedAddressed_ProbationFinalReview">
+          <DataField>TrainingNeedAddressed_ProbationFinalReview</DataField>
+        </Field>
+        <Field Name="TrainingNeedAction_ProbationFinalReview">
+          <DataField>TrainingNeedAction_ProbationFinalReview</DataField>
+        </Field>
+        <Field Name="TrainingNeedReviewDate_ProbationFinalReview">
+          <DataField>TrainingNeedReviewDate_ProbationFinalReview</DataField>
+        </Field>
+        <Field Name="ObjectivesMetAction_ProbationFinalReview">
+          <DataField>ObjectivesMetAction_ProbationFinalReview</DataField>
+        </Field>
+        <Field Name="ObjectiveMetReviewDate_ProbationFinalReview">
+          <DataField>ObjectiveMetReviewDate_ProbationFinalReview</DataField>
+        </Field>
+        <Field Name="AppointmenttobeConfirmed_ProbationFinalReview">
+          <DataField>AppointmenttobeConfirmed_ProbationFinalReview</DataField>
+        </Field>
+        <Field Name="ReasonsForNotConfirming_ProbationFinalReview">
+          <DataField>ReasonsForNotConfirming_ProbationFinalReview</DataField>
+        </Field>
+        <Field Name="EmployeeComments_ProbationFinalReview">
+          <DataField>EmployeeComments_ProbationFinalReview</DataField>
+        </Field>
+        <Field Name="ExtendProbationPeriod_ProbationFinalReview">
+          <DataField>ExtendProbationPeriod_ProbationFinalReview</DataField>
+        </Field>
+        <Field Name="ReasonForExtension_ProbationFinalReview">
+          <DataField>ReasonForExtension_ProbationFinalReview</DataField>
+        </Field>
+        <Field Name="LengthOfExtension_ProbationFinalReview">
+          <DataField>LengthOfExtension_ProbationFinalReview</DataField>
+        </Field>
+        <Field Name="NewProbationEndDate_ProbationFinalReview">
+          <DataField>NewProbationEndDate_ProbationFinalReview</DataField>
+        </Field>
+        <Field Name="ConfirmationLetterSent_ProbationFinalReview">
+          <DataField>ConfirmationLetterSent_ProbationFinalReview</DataField>
+        </Field>
+        <Field Name="ReasonObjectiveNotMet_ProbationFinalReview">
+          <DataField>ReasonObjectiveNotMet_ProbationFinalReview</DataField>
+        </Field>
+        <Field Name="ReasonTrainingNotMet_ProbationFinalReview">
+          <DataField>ReasonTrainingNotMet_ProbationFinalReview</DataField>
+        </Field>
+        <Field Name="AreaOfPerformance_FinalKPI">
+          <DataField>AreaOfPerformance_FinalKPI</DataField>
+        </Field>
+        <Field Name="Remarks_FinalKPI">
+          <DataField>Remarks_FinalKPI</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

@@ -1,0 +1,446 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="OVERTIME_ANALYSIS_FOR_WEEK_NO____________FORMAT_ThisWeek___1_">
+          <DataField>OVERTIME_ANALYSIS_FOR_WEEK_NO____________FORMAT_ThisWeek___1_</DataField>
+        </Field>
+        <Field Name="EmpCode_1_">
+          <DataField>EmpCode_1_</DataField>
+        </Field>
+        <Field Name="EmpName_1_">
+          <DataField>EmpName_1_</DataField>
+        </Field>
+        <Field Name="Dept_1_">
+          <DataField>Dept_1_</DataField>
+        </Field>
+        <Field Name="SubDept_1_">
+          <DataField>SubDept_1_</DataField>
+        </Field>
+        <Field Name="DateDa_1_">
+          <DataField>DateDa_1_</DataField>
+        </Field>
+        <Field Name="NormalHrs_1_">
+          <DataField>NormalHrs_1_</DataField>
+        </Field>
+        <Field Name="NormalHrs_1_Format">
+          <DataField>NormalHrs_1_Format</DataField>
+        </Field>
+        <Field Name="NorOT_1_">
+          <DataField>NorOT_1_</DataField>
+        </Field>
+        <Field Name="NorOT_1_Format">
+          <DataField>NorOT_1_Format</DataField>
+        </Field>
+        <Field Name="WeekOT_1_">
+          <DataField>WeekOT_1_</DataField>
+        </Field>
+        <Field Name="WeekOT_1_Format">
+          <DataField>WeekOT_1_Format</DataField>
+        </Field>
+        <Field Name="HolOT_1_">
+          <DataField>HolOT_1_</DataField>
+        </Field>
+        <Field Name="HolOT_1_Format">
+          <DataField>HolOT_1_Format</DataField>
+        </Field>
+        <Field Name="TotalOTHrs_1_">
+          <DataField>TotalOTHrs_1_</DataField>
+        </Field>
+        <Field Name="TotalOTHrs_1_Format">
+          <DataField>TotalOTHrs_1_Format</DataField>
+        </Field>
+        <Field Name="TotalOTHrs_2_">
+          <DataField>TotalOTHrs_2_</DataField>
+        </Field>
+        <Field Name="TotalOTHrs_2_Format">
+          <DataField>TotalOTHrs_2_Format</DataField>
+        </Field>
+        <Field Name="EmpCode_2_">
+          <DataField>EmpCode_2_</DataField>
+        </Field>
+        <Field Name="EmpName_2_">
+          <DataField>EmpName_2_</DataField>
+        </Field>
+        <Field Name="Dept_2_">
+          <DataField>Dept_2_</DataField>
+        </Field>
+        <Field Name="SubDept_2_">
+          <DataField>SubDept_2_</DataField>
+        </Field>
+        <Field Name="DateDa_2_">
+          <DataField>DateDa_2_</DataField>
+        </Field>
+        <Field Name="NormalHrs_2_">
+          <DataField>NormalHrs_2_</DataField>
+        </Field>
+        <Field Name="NormalHrs_2_Format">
+          <DataField>NormalHrs_2_Format</DataField>
+        </Field>
+        <Field Name="NorOT_2_">
+          <DataField>NorOT_2_</DataField>
+        </Field>
+        <Field Name="NorOT_2_Format">
+          <DataField>NorOT_2_Format</DataField>
+        </Field>
+        <Field Name="WeekOT_2_">
+          <DataField>WeekOT_2_</DataField>
+        </Field>
+        <Field Name="WeekOT_2_Format">
+          <DataField>WeekOT_2_Format</DataField>
+        </Field>
+        <Field Name="HolOT_2_">
+          <DataField>HolOT_2_</DataField>
+        </Field>
+        <Field Name="HolOT_2_Format">
+          <DataField>HolOT_2_Format</DataField>
+        </Field>
+        <Field Name="TotalOTHrs_3_">
+          <DataField>TotalOTHrs_3_</DataField>
+        </Field>
+        <Field Name="TotalOTHrs_3_Format">
+          <DataField>TotalOTHrs_3_Format</DataField>
+        </Field>
+        <Field Name="EmpCode_3_">
+          <DataField>EmpCode_3_</DataField>
+        </Field>
+        <Field Name="EmpName_3_">
+          <DataField>EmpName_3_</DataField>
+        </Field>
+        <Field Name="Dept_3_">
+          <DataField>Dept_3_</DataField>
+        </Field>
+        <Field Name="SubDept_3_">
+          <DataField>SubDept_3_</DataField>
+        </Field>
+        <Field Name="DateDa_3_">
+          <DataField>DateDa_3_</DataField>
+        </Field>
+        <Field Name="NormalHrs_3_">
+          <DataField>NormalHrs_3_</DataField>
+        </Field>
+        <Field Name="NormalHrs_3_Format">
+          <DataField>NormalHrs_3_Format</DataField>
+        </Field>
+        <Field Name="NorOT_3_">
+          <DataField>NorOT_3_</DataField>
+        </Field>
+        <Field Name="NorOT_3_Format">
+          <DataField>NorOT_3_Format</DataField>
+        </Field>
+        <Field Name="WeekOT_3_">
+          <DataField>WeekOT_3_</DataField>
+        </Field>
+        <Field Name="WeekOT_3_Format">
+          <DataField>WeekOT_3_Format</DataField>
+        </Field>
+        <Field Name="HolOT_3_">
+          <DataField>HolOT_3_</DataField>
+        </Field>
+        <Field Name="HolOT_3_Format">
+          <DataField>HolOT_3_Format</DataField>
+        </Field>
+        <Field Name="TotalOTHrs_4_">
+          <DataField>TotalOTHrs_4_</DataField>
+        </Field>
+        <Field Name="TotalOTHrs_4_Format">
+          <DataField>TotalOTHrs_4_Format</DataField>
+        </Field>
+        <Field Name="EmpCode_4_">
+          <DataField>EmpCode_4_</DataField>
+        </Field>
+        <Field Name="EmpName_4_">
+          <DataField>EmpName_4_</DataField>
+        </Field>
+        <Field Name="Dept_4_">
+          <DataField>Dept_4_</DataField>
+        </Field>
+        <Field Name="SubDept_4_">
+          <DataField>SubDept_4_</DataField>
+        </Field>
+        <Field Name="DateDa_4_">
+          <DataField>DateDa_4_</DataField>
+        </Field>
+        <Field Name="NormalHrs_4_">
+          <DataField>NormalHrs_4_</DataField>
+        </Field>
+        <Field Name="NormalHrs_4_Format">
+          <DataField>NormalHrs_4_Format</DataField>
+        </Field>
+        <Field Name="NorOT_4_">
+          <DataField>NorOT_4_</DataField>
+        </Field>
+        <Field Name="NorOT_4_Format">
+          <DataField>NorOT_4_Format</DataField>
+        </Field>
+        <Field Name="WeekOT_4_">
+          <DataField>WeekOT_4_</DataField>
+        </Field>
+        <Field Name="WeekOT_4_Format">
+          <DataField>WeekOT_4_Format</DataField>
+        </Field>
+        <Field Name="HolOT_4_">
+          <DataField>HolOT_4_</DataField>
+        </Field>
+        <Field Name="HolOT_4_Format">
+          <DataField>HolOT_4_Format</DataField>
+        </Field>
+        <Field Name="TotalOTHrs_5_">
+          <DataField>TotalOTHrs_5_</DataField>
+        </Field>
+        <Field Name="TotalOTHrs_5_Format">
+          <DataField>TotalOTHrs_5_Format</DataField>
+        </Field>
+        <Field Name="EmpCode_5_">
+          <DataField>EmpCode_5_</DataField>
+        </Field>
+        <Field Name="EmpName_5_">
+          <DataField>EmpName_5_</DataField>
+        </Field>
+        <Field Name="Dept_5_">
+          <DataField>Dept_5_</DataField>
+        </Field>
+        <Field Name="SubDept_5_">
+          <DataField>SubDept_5_</DataField>
+        </Field>
+        <Field Name="DateDa_5_">
+          <DataField>DateDa_5_</DataField>
+        </Field>
+        <Field Name="NormalHrs_5_">
+          <DataField>NormalHrs_5_</DataField>
+        </Field>
+        <Field Name="NormalHrs_5_Format">
+          <DataField>NormalHrs_5_Format</DataField>
+        </Field>
+        <Field Name="NorOT_5_">
+          <DataField>NorOT_5_</DataField>
+        </Field>
+        <Field Name="NorOT_5_Format">
+          <DataField>NorOT_5_Format</DataField>
+        </Field>
+        <Field Name="WeekOT_5_">
+          <DataField>WeekOT_5_</DataField>
+        </Field>
+        <Field Name="WeekOT_5_Format">
+          <DataField>WeekOT_5_Format</DataField>
+        </Field>
+        <Field Name="HolOT_5_">
+          <DataField>HolOT_5_</DataField>
+        </Field>
+        <Field Name="HolOT_5_Format">
+          <DataField>HolOT_5_Format</DataField>
+        </Field>
+        <Field Name="TotalOTHrs_6_">
+          <DataField>TotalOTHrs_6_</DataField>
+        </Field>
+        <Field Name="TotalOTHrs_6_Format">
+          <DataField>TotalOTHrs_6_Format</DataField>
+        </Field>
+        <Field Name="EmpCode_6_">
+          <DataField>EmpCode_6_</DataField>
+        </Field>
+        <Field Name="EmpName_6_">
+          <DataField>EmpName_6_</DataField>
+        </Field>
+        <Field Name="Dept_6_">
+          <DataField>Dept_6_</DataField>
+        </Field>
+        <Field Name="SubDept_6_">
+          <DataField>SubDept_6_</DataField>
+        </Field>
+        <Field Name="DateDa_6_">
+          <DataField>DateDa_6_</DataField>
+        </Field>
+        <Field Name="NormalHrs_6_">
+          <DataField>NormalHrs_6_</DataField>
+        </Field>
+        <Field Name="NormalHrs_6_Format">
+          <DataField>NormalHrs_6_Format</DataField>
+        </Field>
+        <Field Name="NorOT_6_">
+          <DataField>NorOT_6_</DataField>
+        </Field>
+        <Field Name="NorOT_6_Format">
+          <DataField>NorOT_6_Format</DataField>
+        </Field>
+        <Field Name="WeekOT_6_">
+          <DataField>WeekOT_6_</DataField>
+        </Field>
+        <Field Name="WeekOT_6_Format">
+          <DataField>WeekOT_6_Format</DataField>
+        </Field>
+        <Field Name="HolOT_6_">
+          <DataField>HolOT_6_</DataField>
+        </Field>
+        <Field Name="HolOT_6_Format">
+          <DataField>HolOT_6_Format</DataField>
+        </Field>
+        <Field Name="TotalOTHrs_7_">
+          <DataField>TotalOTHrs_7_</DataField>
+        </Field>
+        <Field Name="TotalOTHrs_7_Format">
+          <DataField>TotalOTHrs_7_Format</DataField>
+        </Field>
+        <Field Name="EmpCode_7_">
+          <DataField>EmpCode_7_</DataField>
+        </Field>
+        <Field Name="EmpName_7_">
+          <DataField>EmpName_7_</DataField>
+        </Field>
+        <Field Name="Dept_7_">
+          <DataField>Dept_7_</DataField>
+        </Field>
+        <Field Name="SubDept_7_">
+          <DataField>SubDept_7_</DataField>
+        </Field>
+        <Field Name="DateDa_7_">
+          <DataField>DateDa_7_</DataField>
+        </Field>
+        <Field Name="NormalHrs_7_">
+          <DataField>NormalHrs_7_</DataField>
+        </Field>
+        <Field Name="NormalHrs_7_Format">
+          <DataField>NormalHrs_7_Format</DataField>
+        </Field>
+        <Field Name="NorOT_7_">
+          <DataField>NorOT_7_</DataField>
+        </Field>
+        <Field Name="NorOT_7_Format">
+          <DataField>NorOT_7_Format</DataField>
+        </Field>
+        <Field Name="WeekOT_7_">
+          <DataField>WeekOT_7_</DataField>
+        </Field>
+        <Field Name="WeekOT_7_Format">
+          <DataField>WeekOT_7_Format</DataField>
+        </Field>
+        <Field Name="HolOT_7_">
+          <DataField>HolOT_7_</DataField>
+        </Field>
+        <Field Name="HolOT_7_Format">
+          <DataField>HolOT_7_Format</DataField>
+        </Field>
+        <Field Name="WorkerCaption">
+          <DataField>WorkerCaption</DataField>
+        </Field>
+        <Field Name="Sub_Caption">
+          <DataField>Sub_Caption</DataField>
+        </Field>
+        <Field Name="NormalCaption">
+          <DataField>NormalCaption</DataField>
+        </Field>
+        <Field Name="Normal_OTCaption">
+          <DataField>Normal_OTCaption</DataField>
+        </Field>
+        <Field Name="Weekend_OTCaption">
+          <DataField>Weekend_OTCaption</DataField>
+        </Field>
+        <Field Name="Holiday_OTCaption">
+          <DataField>Holiday_OTCaption</DataField>
+        </Field>
+        <Field Name="TotalCaption">
+          <DataField>TotalCaption</DataField>
+        </Field>
+        <Field Name="CodeCaption">
+          <DataField>CodeCaption</DataField>
+        </Field>
+        <Field Name="DepartmentCaption">
+          <DataField>DepartmentCaption</DataField>
+        </Field>
+        <Field Name="NormalCaption_Control1102754079">
+          <DataField>NormalCaption_Control1102754079</DataField>
+        </Field>
+        <Field Name="HoursCaption">
+          <DataField>HoursCaption</DataField>
+        </Field>
+        <Field Name="HoursCaption_Control1102754081">
+          <DataField>HoursCaption_Control1102754081</DataField>
+        </Field>
+        <Field Name="HoursCaption_Control1102754082">
+          <DataField>HoursCaption_Control1102754082</DataField>
+        </Field>
+        <Field Name="HoursCaption_Control1102754083">
+          <DataField>HoursCaption_Control1102754083</DataField>
+        </Field>
+        <Field Name="WorkerCaption_Control1102754084">
+          <DataField>WorkerCaption_Control1102754084</DataField>
+        </Field>
+        <Field Name="DepartmentCaption_Control1102754085">
+          <DataField>DepartmentCaption_Control1102754085</DataField>
+        </Field>
+        <Field Name="DateCaption">
+          <DataField>DateCaption</DataField>
+        </Field>
+        <Field Name="Employee_No_">
+          <DataField>Employee_No_</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

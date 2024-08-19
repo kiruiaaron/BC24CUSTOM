@@ -1,0 +1,326 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="CompanyInfo_Name">
+          <DataField>CompanyInfo_Name</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Address">
+          <DataField>CompanyInfo_Address</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Address2">
+          <DataField>CompanyInfo_Address2</DataField>
+        </Field>
+        <Field Name="pic">
+          <DataField>pic</DataField>
+        </Field>
+        <Field Name="CompanyInfo_City">
+          <DataField>CompanyInfo_City</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Phone">
+          <DataField>CompanyInfo_Phone</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Fax">
+          <DataField>CompanyInfo_Fax</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Picture">
+          <DataField>CompanyInfo_Picture</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Email">
+          <DataField>CompanyInfo_Email</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Web">
+          <DataField>CompanyInfo_Web</DataField>
+        </Field>
+        <Field Name="JVNo_JournalVoucherHeader">
+          <DataField>JVNo_JournalVoucherHeader</DataField>
+        </Field>
+        <Field Name="Documentdate_JournalVoucherHeader">
+          <DataField>Documentdate_JournalVoucherHeader</DataField>
+        </Field>
+        <Field Name="PostingDate_JournalVoucherHeader">
+          <DataField>PostingDate_JournalVoucherHeader</DataField>
+        </Field>
+        <Field Name="DateCreated_JournalVoucherHeader">
+          <DataField>DateCreated_JournalVoucherHeader</DataField>
+        </Field>
+        <Field Name="UserID_JournalVoucherHeader">
+          <DataField>UserID_JournalVoucherHeader</DataField>
+        </Field>
+        <Field Name="Status_JournalVoucherHeader">
+          <DataField>Status_JournalVoucherHeader</DataField>
+        </Field>
+        <Field Name="Description_JournalVoucherHeader">
+          <DataField>Description_JournalVoucherHeader</DataField>
+        </Field>
+        <Field Name="JVLinesCont_JournalVoucherHeader">
+          <DataField>JVLinesCont_JournalVoucherHeader</DataField>
+        </Field>
+        <Field Name="TotalAmount_JournalVoucherHeader">
+          <DataField>TotalAmount_JournalVoucherHeader</DataField>
+        </Field>
+        <Field Name="TotalAmount_JournalVoucherHeaderFormat">
+          <DataField>TotalAmount_JournalVoucherHeaderFormat</DataField>
+        </Field>
+        <Field Name="NoSeries_JournalVoucherHeader">
+          <DataField>NoSeries_JournalVoucherHeader</DataField>
+        </Field>
+        <Field Name="Posted_JournalVoucherHeader">
+          <DataField>Posted_JournalVoucherHeader</DataField>
+        </Field>
+        <Field Name="TimePosted_JournalVoucherHeader">
+          <DataField>TimePosted_JournalVoucherHeader</DataField>
+        </Field>
+        <Field Name="PostedBy_JournalVoucherHeader">
+          <DataField>PostedBy_JournalVoucherHeader</DataField>
+        </Field>
+        <Field Name="Reversed_JournalVoucherHeader">
+          <DataField>Reversed_JournalVoucherHeader</DataField>
+        </Field>
+        <Field Name="ReversalDate_JournalVoucherHeader">
+          <DataField>ReversalDate_JournalVoucherHeader</DataField>
+        </Field>
+        <Field Name="ReversalTime_JournalVoucherHeader">
+          <DataField>ReversalTime_JournalVoucherHeader</DataField>
+        </Field>
+        <Field Name="ReversedBy_JournalVoucherHeader">
+          <DataField>ReversedBy_JournalVoucherHeader</DataField>
+        </Field>
+        <Field Name="JVNo_JournalVoucherLines">
+          <DataField>JVNo_JournalVoucherLines</DataField>
+        </Field>
+        <Field Name="AccountName_JournalVoucherLines">
+          <DataField>AccountName_JournalVoucherLines</DataField>
+        </Field>
+        <Field Name="BalAccountName_JournalVoucherLines">
+          <DataField>BalAccountName_JournalVoucherLines</DataField>
+        </Field>
+        <Field Name="LineNo_JournalVoucherLines">
+          <DataField>LineNo_JournalVoucherLines</DataField>
+        </Field>
+        <Field Name="AccountType_JournalVoucherLines">
+          <DataField>AccountType_JournalVoucherLines</DataField>
+        </Field>
+        <Field Name="AccountNo_JournalVoucherLines">
+          <DataField>AccountNo_JournalVoucherLines</DataField>
+        </Field>
+        <Field Name="PostingDate_JournalVoucherLines">
+          <DataField>PostingDate_JournalVoucherLines</DataField>
+        </Field>
+        <Field Name="DocumentType_JournalVoucherLines">
+          <DataField>DocumentType_JournalVoucherLines</DataField>
+        </Field>
+        <Field Name="DocumentNo_JournalVoucherLines">
+          <DataField>DocumentNo_JournalVoucherLines</DataField>
+        </Field>
+        <Field Name="Description_JournalVoucherLines">
+          <DataField>Description_JournalVoucherLines</DataField>
+        </Field>
+        <Field Name="VAT_JournalVoucherLines">
+          <DataField>VAT_JournalVoucherLines</DataField>
+        </Field>
+        <Field Name="VAT_JournalVoucherLinesFormat">
+          <DataField>VAT_JournalVoucherLinesFormat</DataField>
+        </Field>
+        <Field Name="BalAccountNo_JournalVoucherLines">
+          <DataField>BalAccountNo_JournalVoucherLines</DataField>
+        </Field>
+        <Field Name="CurrencyCode_JournalVoucherLines">
+          <DataField>CurrencyCode_JournalVoucherLines</DataField>
+        </Field>
+        <Field Name="Amount_JournalVoucherLines">
+          <DataField>Amount_JournalVoucherLines</DataField>
+        </Field>
+        <Field Name="Amount_JournalVoucherLinesFormat">
+          <DataField>Amount_JournalVoucherLinesFormat</DataField>
+        </Field>
+        <Field Name="DebitAmount_JournalVoucherLines">
+          <DataField>DebitAmount_JournalVoucherLines</DataField>
+        </Field>
+        <Field Name="DebitAmount_JournalVoucherLinesFormat">
+          <DataField>DebitAmount_JournalVoucherLinesFormat</DataField>
+        </Field>
+        <Field Name="CreditAmount_JournalVoucherLines">
+          <DataField>CreditAmount_JournalVoucherLines</DataField>
+        </Field>
+        <Field Name="CreditAmount_JournalVoucherLinesFormat">
+          <DataField>CreditAmount_JournalVoucherLinesFormat</DataField>
+        </Field>
+        <Field Name="AmountLCY_JournalVoucherLines">
+          <DataField>AmountLCY_JournalVoucherLines</DataField>
+        </Field>
+        <Field Name="AmountLCY_JournalVoucherLinesFormat">
+          <DataField>AmountLCY_JournalVoucherLinesFormat</DataField>
+        </Field>
+        <Field Name="BalanceLCY_JournalVoucherLines">
+          <DataField>BalanceLCY_JournalVoucherLines</DataField>
+        </Field>
+        <Field Name="BalanceLCY_JournalVoucherLinesFormat">
+          <DataField>BalanceLCY_JournalVoucherLinesFormat</DataField>
+        </Field>
+        <Field Name="CurrencyFactor_JournalVoucherLines">
+          <DataField>CurrencyFactor_JournalVoucherLines</DataField>
+        </Field>
+        <Field Name="CurrencyFactor_JournalVoucherLinesFormat">
+          <DataField>CurrencyFactor_JournalVoucherLinesFormat</DataField>
+        </Field>
+        <Field Name="ShortcutDimension1Code_JournalVoucherLines">
+          <DataField>ShortcutDimension1Code_JournalVoucherLines</DataField>
+        </Field>
+        <Field Name="ShortcutDimension2Code_JournalVoucherLines">
+          <DataField>ShortcutDimension2Code_JournalVoucherLines</DataField>
+        </Field>
+        <Field Name="AppliestoDocType_JournalVoucherLines">
+          <DataField>AppliestoDocType_JournalVoucherLines</DataField>
+        </Field>
+        <Field Name="AppliestoDocNo_JournalVoucherLines">
+          <DataField>AppliestoDocNo_JournalVoucherLines</DataField>
+        </Field>
+        <Field Name="BalAccountType_JournalVoucherLines">
+          <DataField>BalAccountType_JournalVoucherLines</DataField>
+        </Field>
+        <Field Name="ExternalDocumentNo_JournalVoucherLines">
+          <DataField>ExternalDocumentNo_JournalVoucherLines</DataField>
+        </Field>
+        <Field Name="FAPostingDate_JournalVoucherLines">
+          <DataField>FAPostingDate_JournalVoucherLines</DataField>
+        </Field>
+        <Field Name="FAPostingType_JournalVoucherLines">
+          <DataField>FAPostingType_JournalVoucherLines</DataField>
+        </Field>
+        <Field Name="DepreciationBookCode_JournalVoucherLines">
+          <DataField>DepreciationBookCode_JournalVoucherLines</DataField>
+        </Field>
+        <Field Name="Description2_JournalVoucherLines">
+          <DataField>Description2_JournalVoucherLines</DataField>
+        </Field>
+        <Field Name="ShortcutDimension3Code_JournalVoucherLines">
+          <DataField>ShortcutDimension3Code_JournalVoucherLines</DataField>
+        </Field>
+        <Field Name="ShortcutDimension4Code_JournalVoucherLines">
+          <DataField>ShortcutDimension4Code_JournalVoucherLines</DataField>
+        </Field>
+        <Field Name="ShortcutDimension5Code_JournalVoucherLines">
+          <DataField>ShortcutDimension5Code_JournalVoucherLines</DataField>
+        </Field>
+        <Field Name="ShortcutDimension6Code_JournalVoucherLines">
+          <DataField>ShortcutDimension6Code_JournalVoucherLines</DataField>
+        </Field>
+        <Field Name="ShortcutDimension7Code_JournalVoucherLines">
+          <DataField>ShortcutDimension7Code_JournalVoucherLines</DataField>
+        </Field>
+        <Field Name="ShortcutDimension8Code_JournalVoucherLines">
+          <DataField>ShortcutDimension8Code_JournalVoucherLines</DataField>
+        </Field>
+        <Field Name="PostingGroup_JournalVoucherLines">
+          <DataField>PostingGroup_JournalVoucherLines</DataField>
+        </Field>
+        <Field Name="Posted_JournalVoucherLines">
+          <DataField>Posted_JournalVoucherLines</DataField>
+        </Field>
+        <Field Name="DatePosted_JournalVoucherLines">
+          <DataField>DatePosted_JournalVoucherLines</DataField>
+        </Field>
+        <Field Name="PostedBy_JournalVoucherLines">
+          <DataField>PostedBy_JournalVoucherLines</DataField>
+        </Field>
+        <Field Name="TimePosted_JournalVoucherLines">
+          <DataField>TimePosted_JournalVoucherLines</DataField>
+        </Field>
+        <Field Name="SequenceNo">
+          <DataField>SequenceNo</DataField>
+        </Field>
+        <Field Name="LastDateTimeModified">
+          <DataField>LastDateTimeModified</DataField>
+        </Field>
+        <Field Name="ApproverID">
+          <DataField>ApproverID</DataField>
+        </Field>
+        <Field Name="ApproverID_ApprovalEntry">
+          <DataField>ApproverID_ApprovalEntry</DataField>
+        </Field>
+        <Field Name="SenderID">
+          <DataField>SenderID</DataField>
+        </Field>
+        <Field Name="EmployeeFirstName">
+          <DataField>EmployeeFirstName</DataField>
+        </Field>
+        <Field Name="EmployeeMiddleName">
+          <DataField>EmployeeMiddleName</DataField>
+        </Field>
+        <Field Name="EmployeeLastName">
+          <DataField>EmployeeLastName</DataField>
+        </Field>
+        <Field Name="EmployeeSignature">
+          <DataField>EmployeeSignature</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

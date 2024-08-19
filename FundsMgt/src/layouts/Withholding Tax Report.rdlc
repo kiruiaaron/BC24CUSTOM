@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="AppliestoDocType_PaymentLine">
+          <DataField>AppliestoDocType_PaymentLine</DataField>
+        </Field>
+        <Field Name="AppliestoDocNo_PaymentLine">
+          <DataField>AppliestoDocNo_PaymentLine</DataField>
+        </Field>
+        <Field Name="AppliestoID_PaymentLine">
+          <DataField>AppliestoID_PaymentLine</DataField>
+        </Field>
+        <Field Name="Committed_PaymentLine">
+          <DataField>Committed_PaymentLine</DataField>
+        </Field>
+        <Field Name="DocumentNo_PaymentLine">
+          <DataField>DocumentNo_PaymentLine</DataField>
+        </Field>
+        <Field Name="AccountNo_PaymentLine">
+          <DataField>AccountNo_PaymentLine</DataField>
+        </Field>
+        <Field Name="AccountName_PaymentLine">
+          <DataField>AccountName_PaymentLine</DataField>
+        </Field>
+        <Field Name="Description_PaymentLine">
+          <DataField>Description_PaymentLine</DataField>
+        </Field>
+        <Field Name="PostingDate_PaymentLine">
+          <DataField>PostingDate_PaymentLine</DataField>
+        </Field>
+        <Field Name="NumberText">
+          <DataField>NumberText</DataField>
+        </Field>
+        <Field Name="CompanyInfoName">
+          <DataField>CompanyInfoName</DataField>
+        </Field>
+        <Field Name="CompanyInfoAddress">
+          <DataField>CompanyInfoAddress</DataField>
+        </Field>
+        <Field Name="CompanyInfoPhone">
+          <DataField>CompanyInfoPhone</DataField>
+        </Field>
+        <Field Name="CompanyInfoPic">
+          <DataField>CompanyInfoPic</DataField>
+        </Field>
+        <Field Name="CompanyEmail">
+          <DataField>CompanyEmail</DataField>
+        </Field>
+        <Field Name="CompanyWebPage">
+          <DataField>CompanyWebPage</DataField>
+        </Field>
+        <Field Name="VATCode_PaymentLine">
+          <DataField>VATCode_PaymentLine</DataField>
+        </Field>
+        <Field Name="VATAmount_PaymentLine">
+          <DataField>VATAmount_PaymentLine</DataField>
+        </Field>
+        <Field Name="VATAmount_PaymentLineFormat">
+          <DataField>VATAmount_PaymentLineFormat</DataField>
+        </Field>
+        <Field Name="VATAmountLCY_PaymentLine">
+          <DataField>VATAmountLCY_PaymentLine</DataField>
+        </Field>
+        <Field Name="VATAmountLCY_PaymentLineFormat">
+          <DataField>VATAmountLCY_PaymentLineFormat</DataField>
+        </Field>
+        <Field Name="WithholdingTaxCode_PaymentLine">
+          <DataField>WithholdingTaxCode_PaymentLine</DataField>
+        </Field>
+        <Field Name="WithholdingTaxAmount_PaymentLine">
+          <DataField>WithholdingTaxAmount_PaymentLine</DataField>
+        </Field>
+        <Field Name="WithholdingTaxAmount_PaymentLineFormat">
+          <DataField>WithholdingTaxAmount_PaymentLineFormat</DataField>
+        </Field>
+        <Field Name="WithholdingTaxAmountLCY_PaymentLine">
+          <DataField>WithholdingTaxAmountLCY_PaymentLine</DataField>
+        </Field>
+        <Field Name="WithholdingTaxAmountLCY_PaymentLineFormat">
+          <DataField>WithholdingTaxAmountLCY_PaymentLineFormat</DataField>
+        </Field>
+        <Field Name="WithholdingVATCode_PaymentLine">
+          <DataField>WithholdingVATCode_PaymentLine</DataField>
+        </Field>
+        <Field Name="WithholdingVATAmount_PaymentLine">
+          <DataField>WithholdingVATAmount_PaymentLine</DataField>
+        </Field>
+        <Field Name="WithholdingVATAmount_PaymentLineFormat">
+          <DataField>WithholdingVATAmount_PaymentLineFormat</DataField>
+        </Field>
+        <Field Name="WithholdingVATAmountLCY_PaymentLine">
+          <DataField>WithholdingVATAmountLCY_PaymentLine</DataField>
+        </Field>
+        <Field Name="WithholdingVATAmountLCY_PaymentLineFormat">
+          <DataField>WithholdingVATAmountLCY_PaymentLineFormat</DataField>
+        </Field>
+        <Field Name="NetAmount_PaymentLine">
+          <DataField>NetAmount_PaymentLine</DataField>
+        </Field>
+        <Field Name="NetAmount_PaymentLineFormat">
+          <DataField>NetAmount_PaymentLineFormat</DataField>
+        </Field>
+        <Field Name="PINno">
+          <DataField>PINno</DataField>
+        </Field>
+        <Field Name="InvoiceDate">
+          <DataField>InvoiceDate</DataField>
+        </Field>
+        <Field Name="InvoiceAmt">
+          <DataField>InvoiceAmt</DataField>
+        </Field>
+        <Field Name="InvoiceAmtFormat">
+          <DataField>InvoiceAmtFormat</DataField>
+        </Field>
+        <Field Name="ShortcutDimension6Code_PaymentLine">
+          <DataField>ShortcutDimension6Code_PaymentLine</DataField>
+        </Field>
+        <Field Name="GlobalDimension1Code_PaymentLine">
+          <DataField>GlobalDimension1Code_PaymentLine</DataField>
+        </Field>
+        <Field Name="VendorInvoiceNo">
+          <DataField>VendorInvoiceNo</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

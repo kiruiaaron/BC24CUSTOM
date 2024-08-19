@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="CompanyInfo_Name">
+          <DataField>CompanyInfo_Name</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Address">
+          <DataField>CompanyInfo_Address</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Address2">
+          <DataField>CompanyInfo_Address2</DataField>
+        </Field>
+        <Field Name="pic">
+          <DataField>pic</DataField>
+        </Field>
+        <Field Name="CompanyInfo_City">
+          <DataField>CompanyInfo_City</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Phone">
+          <DataField>CompanyInfo_Phone</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Fax">
+          <DataField>CompanyInfo_Fax</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Picture">
+          <DataField>CompanyInfo_Picture</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Email">
+          <DataField>CompanyInfo_Email</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Web">
+          <DataField>CompanyInfo_Web</DataField>
+        </Field>
+        <Field Name="Number">
+          <DataField>Number</DataField>
+        </Field>
+        <Field Name="No_Vendor">
+          <DataField>No_Vendor</DataField>
+        </Field>
+        <Field Name="Name_Vendor">
+          <DataField>Name_Vendor</DataField>
+        </Field>
+        <Field Name="SearchName_Vendor">
+          <DataField>SearchName_Vendor</DataField>
+        </Field>
+        <Field Name="Name2_Vendor">
+          <DataField>Name2_Vendor</DataField>
+        </Field>
+        <Field Name="Address_Vendor">
+          <DataField>Address_Vendor</DataField>
+        </Field>
+        <Field Name="Address2_Vendor">
+          <DataField>Address2_Vendor</DataField>
+        </Field>
+        <Field Name="City_Vendor">
+          <DataField>City_Vendor</DataField>
+        </Field>
+        <Field Name="Contact_Vendor">
+          <DataField>Contact_Vendor</DataField>
+        </Field>
+        <Field Name="PhoneNo_Vendor">
+          <DataField>PhoneNo_Vendor</DataField>
+        </Field>
+        <Field Name="EMail_Vendor">
+          <DataField>EMail_Vendor</DataField>
+        </Field>
+        <Field Name="BankCode_Vendor">
+          <DataField>BankCode_Vendor</DataField>
+        </Field>
+        <Field Name="BankName_Vendor">
+          <DataField>BankName_Vendor</DataField>
+        </Field>
+        <Field Name="BankBranchCode_Vendor">
+          <DataField>BankBranchCode_Vendor</DataField>
+        </Field>
+        <Field Name="BankBranchName_Vendor">
+          <DataField>BankBranchName_Vendor</DataField>
+        </Field>
+        <Field Name="BankAccountName_Vendor">
+          <DataField>BankAccountName_Vendor</DataField>
+        </Field>
+        <Field Name="BankAccountNo_Vendor">
+          <DataField>BankAccountNo_Vendor</DataField>
+        </Field>
+        <Field Name="MPESAPaybillAccountNo_Vendor">
+          <DataField>MPESAPaybillAccountNo_Vendor</DataField>
+        </Field>
+        <Field Name="CreatedBy_Vendor">
+          <DataField>CreatedBy_Vendor</DataField>
+        </Field>
+        <Field Name="VendorCreationDate_Vendor">
+          <DataField>VendorCreationDate_Vendor</DataField>
+        </Field>
+        <Field Name="VATRegistered_Vendor">
+          <DataField>VATRegistered_Vendor</DataField>
+        </Field>
+        <Field Name="VATRegistrationNos_Vendor">
+          <DataField>VATRegistrationNos_Vendor</DataField>
+        </Field>
+        <Field Name="DateofIncorporation_Vendor">
+          <DataField>DateofIncorporation_Vendor</DataField>
+        </Field>
+        <Field Name="IncorporationCertificateNo_Vendor">
+          <DataField>IncorporationCertificateNo_Vendor</DataField>
+        </Field>
+        <Field Name="AGPO_Vendor">
+          <DataField>AGPO_Vendor</DataField>
+        </Field>
+        <Field Name="Building_Vendor">
+          <DataField>Building_Vendor</DataField>
+        </Field>
+        <Field Name="CountyCode_Vendor">
+          <DataField>CountyCode_Vendor</DataField>
+        </Field>
+        <Field Name="CountyName_Vendor">
+          <DataField>CountyName_Vendor</DataField>
+        </Field>
+        <Field Name="Street_Vendor">
+          <DataField>Street_Vendor</DataField>
+        </Field>
+        <Field Name="SupplierCategoryCode_Vendor">
+          <DataField>SupplierCategoryCode_Vendor</DataField>
+        </Field>
+        <Field Name="Contacts_Vendor">
+          <DataField>Contacts_Vendor</DataField>
+        </Field>
+        <Field Name="SequenceNo">
+          <DataField>SequenceNo</DataField>
+        </Field>
+        <Field Name="LastDateTimeModified">
+          <DataField>LastDateTimeModified</DataField>
+        </Field>
+        <Field Name="ApproverID">
+          <DataField>ApproverID</DataField>
+        </Field>
+        <Field Name="ApproverID_ApprovalEntry">
+          <DataField>ApproverID_ApprovalEntry</DataField>
+        </Field>
+        <Field Name="SenderID">
+          <DataField>SenderID</DataField>
+        </Field>
+        <Field Name="EmployeeFirstName">
+          <DataField>EmployeeFirstName</DataField>
+        </Field>
+        <Field Name="EmployeeMiddleName">
+          <DataField>EmployeeMiddleName</DataField>
+        </Field>
+        <Field Name="EmployeeLastName">
+          <DataField>EmployeeLastName</DataField>
+        </Field>
+        <Field Name="EmployeeSignature">
+          <DataField>EmployeeSignature</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="CompanyInfo_Name">
+          <DataField>CompanyInfo_Name</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Address">
+          <DataField>CompanyInfo_Address</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Address2">
+          <DataField>CompanyInfo_Address2</DataField>
+        </Field>
+        <Field Name="pic">
+          <DataField>pic</DataField>
+        </Field>
+        <Field Name="CompanyInfo_City">
+          <DataField>CompanyInfo_City</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Phone">
+          <DataField>CompanyInfo_Phone</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Fax">
+          <DataField>CompanyInfo_Fax</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Picture">
+          <DataField>CompanyInfo_Picture</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Email">
+          <DataField>CompanyInfo_Email</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Web">
+          <DataField>CompanyInfo_Web</DataField>
+        </Field>
+        <Field Name="No_HRAssetTransferHeader">
+          <DataField>No_HRAssetTransferHeader</DataField>
+        </Field>
+        <Field Name="DocumentDate_HRAssetTransferHeader">
+          <DataField>DocumentDate_HRAssetTransferHeader</DataField>
+        </Field>
+        <Field Name="DateRequested_HRAssetTransferHeader">
+          <DataField>DateRequested_HRAssetTransferHeader</DataField>
+        </Field>
+        <Field Name="TransferReason_HRAssetTransferHeader">
+          <DataField>TransferReason_HRAssetTransferHeader</DataField>
+        </Field>
+        <Field Name="Status_HRAssetTransferHeader">
+          <DataField>Status_HRAssetTransferHeader</DataField>
+        </Field>
+        <Field Name="TransferEffected_HRAssetTransferHeader">
+          <DataField>TransferEffected_HRAssetTransferHeader</DataField>
+        </Field>
+        <Field Name="DateTransfered_HRAssetTransferHeader">
+          <DataField>DateTransfered_HRAssetTransferHeader</DataField>
+        </Field>
+        <Field Name="TransferedBy_HRAssetTransferHeader">
+          <DataField>TransferedBy_HRAssetTransferHeader</DataField>
+        </Field>
+        <Field Name="TimePosted_HRAssetTransferHeader">
+          <DataField>TimePosted_HRAssetTransferHeader</DataField>
+        </Field>
+        <Field Name="UserID_HRAssetTransferHeader">
+          <DataField>UserID_HRAssetTransferHeader</DataField>
+        </Field>
+        <Field Name="ResponsibilityCenter_HRAssetTransferHeader">
+          <DataField>ResponsibilityCenter_HRAssetTransferHeader</DataField>
+        </Field>
+        <Field Name="NoSeries_HRAssetTransferHeader">
+          <DataField>NoSeries_HRAssetTransferHeader</DataField>
+        </Field>
+        <Field Name="ActivityType_HRAssetTransferHeader">
+          <DataField>ActivityType_HRAssetTransferHeader</DataField>
+        </Field>
+        <Field Name="DocumentNo_HRAssetTransferLines">
+          <DataField>DocumentNo_HRAssetTransferLines</DataField>
+        </Field>
+        <Field Name="AssetNo_HRAssetTransferLines">
+          <DataField>AssetNo_HRAssetTransferLines</DataField>
+        </Field>
+        <Field Name="AssetTagNo_HRAssetTransferLines">
+          <DataField>AssetTagNo_HRAssetTransferLines</DataField>
+        </Field>
+        <Field Name="AssetDescription_HRAssetTransferLines">
+          <DataField>AssetDescription_HRAssetTransferLines</DataField>
+        </Field>
+        <Field Name="AssetSerialNo_HRAssetTransferLines">
+          <DataField>AssetSerialNo_HRAssetTransferLines</DataField>
+        </Field>
+        <Field Name="FALocation_HRAssetTransferLines">
+          <DataField>FALocation_HRAssetTransferLines</DataField>
+        </Field>
+        <Field Name="NewAssetLocation_HRAssetTransferLines">
+          <DataField>NewAssetLocation_HRAssetTransferLines</DataField>
+        </Field>
+        <Field Name="ResponsibleEmployeeCode_HRAssetTransferLines">
+          <DataField>ResponsibleEmployeeCode_HRAssetTransferLines</DataField>
+        </Field>
+        <Field Name="ResponsibleEmployeeName_HRAssetTransferLines">
+          <DataField>ResponsibleEmployeeName_HRAssetTransferLines</DataField>
+        </Field>
+        <Field Name="NewResponsibleEmployeeCode_HRAssetTransferLines">
+          <DataField>NewResponsibleEmployeeCode_HRAssetTransferLines</DataField>
+        </Field>
+        <Field Name="NewResponsibleEmployeeName_HRAssetTransferLines">
+          <DataField>NewResponsibleEmployeeName_HRAssetTransferLines</DataField>
+        </Field>
+        <Field Name="ReasonforTransfer_HRAssetTransferLines">
+          <DataField>ReasonforTransfer_HRAssetTransferLines</DataField>
+        </Field>
+        <Field Name="GlobalDimension1Code_HRAssetTransferLines">
+          <DataField>GlobalDimension1Code_HRAssetTransferLines</DataField>
+        </Field>
+        <Field Name="NewGlobalDimension1Code_HRAssetTransferLines">
+          <DataField>NewGlobalDimension1Code_HRAssetTransferLines</DataField>
+        </Field>
+        <Field Name="GlobalDimension2Code_HRAssetTransferLines">
+          <DataField>GlobalDimension2Code_HRAssetTransferLines</DataField>
+        </Field>
+        <Field Name="NewGlobalDimension2Code_HRAssetTransferLines">
+          <DataField>NewGlobalDimension2Code_HRAssetTransferLines</DataField>
+        </Field>
+        <Field Name="ShortcutDimension3Code_HRAssetTransferLines">
+          <DataField>ShortcutDimension3Code_HRAssetTransferLines</DataField>
+        </Field>
+        <Field Name="NewShortcutDimension3Code_HRAssetTransferLines">
+          <DataField>NewShortcutDimension3Code_HRAssetTransferLines</DataField>
+        </Field>
+        <Field Name="ShortcutDimension4Code_HRAssetTransferLines">
+          <DataField>ShortcutDimension4Code_HRAssetTransferLines</DataField>
+        </Field>
+        <Field Name="NewShortcutDimension4Code_HRAssetTransferLines">
+          <DataField>NewShortcutDimension4Code_HRAssetTransferLines</DataField>
+        </Field>
+        <Field Name="ShortcutDimension5Code_HRAssetTransferLines">
+          <DataField>ShortcutDimension5Code_HRAssetTransferLines</DataField>
+        </Field>
+        <Field Name="NewShortcutDimension5Code_HRAssetTransferLines">
+          <DataField>NewShortcutDimension5Code_HRAssetTransferLines</DataField>
+        </Field>
+        <Field Name="ShortcutDimension6Code_HRAssetTransferLines">
+          <DataField>ShortcutDimension6Code_HRAssetTransferLines</DataField>
+        </Field>
+        <Field Name="NewShortcutDimension6Code_HRAssetTransferLines">
+          <DataField>NewShortcutDimension6Code_HRAssetTransferLines</DataField>
+        </Field>
+        <Field Name="EmployeeFirstName">
+          <DataField>EmployeeFirstName</DataField>
+        </Field>
+        <Field Name="EmployeeMiddleName">
+          <DataField>EmployeeMiddleName</DataField>
+        </Field>
+        <Field Name="EmployeeLastName">
+          <DataField>EmployeeLastName</DataField>
+        </Field>
+        <Field Name="EmployeeSignature">
+          <DataField>EmployeeSignature</DataField>
+        </Field>
+        <Field Name="FullName">
+          <DataField>FullName</DataField>
+        </Field>
+        <Field Name="SequenceNo">
+          <DataField>SequenceNo</DataField>
+        </Field>
+        <Field Name="LastDateTimeModified">
+          <DataField>LastDateTimeModified</DataField>
+        </Field>
+        <Field Name="ApproverID">
+          <DataField>ApproverID</DataField>
+        </Field>
+        <Field Name="ApproverID_ApprovalEntry">
+          <DataField>ApproverID_ApprovalEntry</DataField>
+        </Field>
+        <Field Name="SenderID">
+          <DataField>SenderID</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

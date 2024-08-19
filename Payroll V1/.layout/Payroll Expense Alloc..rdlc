@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="EmployeeNoCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>EmployeeNoCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>EmployeeNoCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="EDcodeCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>EDcodeCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>EDcodeCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="DimCode1Caption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>DimCode1Caption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>DimCode1Caption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="DimCodeValue1Caption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>DimCodeValue1Caption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>DimCodeValue1Caption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="DimCode2Caption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>DimCode2Caption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>DimCode2Caption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="DimCodeValue2Caption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>DimCodeValue2Caption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>DimCodeValue2Caption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="DimCode3Caption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>DimCode3Caption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>DimCode3Caption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="DimCodeValue3Caption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>DimCodeValue3Caption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>DimCodeValue3Caption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="DimCode4Caption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>DimCode4Caption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>DimCode4Caption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="DimCodeValue4Caption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>DimCodeValue4Caption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>DimCodeValue4Caption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="AllocatedCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>AllocatedCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>AllocatedCaption</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="MonthYear">
+          <DataField>MonthYear</DataField>
+        </Field>
+        <Field Name="OtherFilters">
+          <DataField>OtherFilters</DataField>
+        </Field>
+        <Field Name="COMPANYNAME">
+          <DataField>COMPANYNAME</DataField>
+        </Field>
+        <Field Name="PostingDate">
+          <DataField>PostingDate</DataField>
+        </Field>
+        <Field Name="EmployeeNo">
+          <DataField>EmployeeNo</DataField>
+        </Field>
+        <Field Name="EDcode">
+          <DataField>EDcode</DataField>
+        </Field>
+        <Field Name="DimCode1">
+          <DataField>DimCode1</DataField>
+        </Field>
+        <Field Name="DimCodeValue1">
+          <DataField>DimCodeValue1</DataField>
+        </Field>
+        <Field Name="DimCode2">
+          <DataField>DimCode2</DataField>
+        </Field>
+        <Field Name="DimCodeValue2">
+          <DataField>DimCodeValue2</DataField>
+        </Field>
+        <Field Name="DimCode3">
+          <DataField>DimCode3</DataField>
+        </Field>
+        <Field Name="DimCodeValue3">
+          <DataField>DimCodeValue3</DataField>
+        </Field>
+        <Field Name="DimCode4">
+          <DataField>DimCode4</DataField>
+        </Field>
+        <Field Name="DimCodeValue4">
+          <DataField>DimCodeValue4</DataField>
+        </Field>
+        <Field Name="Allocated">
+          <DataField>Allocated</DataField>
+        </Field>
+        <Field Name="AllocatedFormat">
+          <DataField>AllocatedFormat</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

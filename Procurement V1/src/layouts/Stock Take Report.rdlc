@@ -1,0 +1,728 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="JournalTemplateName_ItemJournalLine">
+          <DataField>JournalTemplateName_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="LineNo_ItemJournalLine">
+          <DataField>LineNo_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="ItemNo_ItemJournalLine">
+          <DataField>ItemNo_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="PostingDate_ItemJournalLine">
+          <DataField>PostingDate_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="EntryType_ItemJournalLine">
+          <DataField>EntryType_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="SourceNo_ItemJournalLine">
+          <DataField>SourceNo_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="DocumentNo_ItemJournalLine">
+          <DataField>DocumentNo_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="Description_ItemJournalLine">
+          <DataField>Description_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="LocationCode_ItemJournalLine">
+          <DataField>LocationCode_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="InventoryPostingGroup_ItemJournalLine">
+          <DataField>InventoryPostingGroup_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="SourcePostingGroup_ItemJournalLine">
+          <DataField>SourcePostingGroup_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="Quantity_ItemJournalLine">
+          <DataField>Quantity_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="Quantity_ItemJournalLineFormat">
+          <DataField>Quantity_ItemJournalLineFormat</DataField>
+        </Field>
+        <Field Name="InvoicedQuantity_ItemJournalLine">
+          <DataField>InvoicedQuantity_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="InvoicedQuantity_ItemJournalLineFormat">
+          <DataField>InvoicedQuantity_ItemJournalLineFormat</DataField>
+        </Field>
+        <Field Name="UnitAmount_ItemJournalLine">
+          <DataField>UnitAmount_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="UnitAmount_ItemJournalLineFormat">
+          <DataField>UnitAmount_ItemJournalLineFormat</DataField>
+        </Field>
+        <Field Name="UnitCost_ItemJournalLine">
+          <DataField>UnitCost_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="UnitCost_ItemJournalLineFormat">
+          <DataField>UnitCost_ItemJournalLineFormat</DataField>
+        </Field>
+        <Field Name="Amount_ItemJournalLine">
+          <DataField>Amount_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="Amount_ItemJournalLineFormat">
+          <DataField>Amount_ItemJournalLineFormat</DataField>
+        </Field>
+        <Field Name="DiscountAmount_ItemJournalLine">
+          <DataField>DiscountAmount_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="DiscountAmount_ItemJournalLineFormat">
+          <DataField>DiscountAmount_ItemJournalLineFormat</DataField>
+        </Field>
+        <Field Name="SalespersPurchCode_ItemJournalLine">
+          <DataField>SalespersPurchCode_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="SourceCode_ItemJournalLine">
+          <DataField>SourceCode_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="AppliestoEntry_ItemJournalLine">
+          <DataField>AppliestoEntry_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="ItemShptEntryNo_ItemJournalLine">
+          <DataField>ItemShptEntryNo_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="ShortcutDimension1Code_ItemJournalLine">
+          <DataField>ShortcutDimension1Code_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="ShortcutDimension2Code_ItemJournalLine">
+          <DataField>ShortcutDimension2Code_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="IndirectCost_ItemJournalLine">
+          <DataField>IndirectCost_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="IndirectCost_ItemJournalLineFormat">
+          <DataField>IndirectCost_ItemJournalLineFormat</DataField>
+        </Field>
+        <Field Name="SourceType_ItemJournalLine">
+          <DataField>SourceType_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="JournalBatchName_ItemJournalLine">
+          <DataField>JournalBatchName_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="ReasonCode_ItemJournalLine">
+          <DataField>ReasonCode_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="RecurringMethod_ItemJournalLine">
+          <DataField>RecurringMethod_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="ExpirationDate_ItemJournalLine">
+          <DataField>ExpirationDate_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="RecurringFrequency_ItemJournalLine">
+          <DataField>RecurringFrequency_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="DropShipment_ItemJournalLine">
+          <DataField>DropShipment_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="TransactionType_ItemJournalLine">
+          <DataField>TransactionType_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="TransportMethod_ItemJournalLine">
+          <DataField>TransportMethod_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="CountryRegionCode_ItemJournalLine">
+          <DataField>CountryRegionCode_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="NewLocationCode_ItemJournalLine">
+          <DataField>NewLocationCode_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="NewShortcutDimension1Code_ItemJournalLine">
+          <DataField>NewShortcutDimension1Code_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="NewShortcutDimension2Code_ItemJournalLine">
+          <DataField>NewShortcutDimension2Code_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="QtyCalculated_ItemJournalLine">
+          <DataField>QtyCalculated_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="QtyCalculated_ItemJournalLineFormat">
+          <DataField>QtyCalculated_ItemJournalLineFormat</DataField>
+        </Field>
+        <Field Name="QtyPhysInventory_ItemJournalLine">
+          <DataField>QtyPhysInventory_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="QtyPhysInventory_ItemJournalLineFormat">
+          <DataField>QtyPhysInventory_ItemJournalLineFormat</DataField>
+        </Field>
+        <Field Name="LastItemLedgerEntryNo_ItemJournalLine">
+          <DataField>LastItemLedgerEntryNo_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="PhysInventory_ItemJournalLine">
+          <DataField>PhysInventory_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="GenBusPostingGroup_ItemJournalLine">
+          <DataField>GenBusPostingGroup_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="GenProdPostingGroup_ItemJournalLine">
+          <DataField>GenProdPostingGroup_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="EntryExitPoint_ItemJournalLine">
+          <DataField>EntryExitPoint_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="DocumentDate_ItemJournalLine">
+          <DataField>DocumentDate_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="ExternalDocumentNo_ItemJournalLine">
+          <DataField>ExternalDocumentNo_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="Area_ItemJournalLine">
+          <DataField>Area_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="TransactionSpecification_ItemJournalLine">
+          <DataField>TransactionSpecification_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="PostingNoSeries_ItemJournalLine">
+          <DataField>PostingNoSeries_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="ReservedQuantity_ItemJournalLine">
+          <DataField>ReservedQuantity_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="ReservedQuantity_ItemJournalLineFormat">
+          <DataField>ReservedQuantity_ItemJournalLineFormat</DataField>
+        </Field>
+        <Field Name="UnitCostACY_ItemJournalLine">
+          <DataField>UnitCostACY_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="UnitCostACY_ItemJournalLineFormat">
+          <DataField>UnitCostACY_ItemJournalLineFormat</DataField>
+        </Field>
+        <Field Name="SourceCurrencyCode_ItemJournalLine">
+          <DataField>SourceCurrencyCode_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="DocumentType_ItemJournalLine">
+          <DataField>DocumentType_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="DocumentLineNo_ItemJournalLine">
+          <DataField>DocumentLineNo_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="OrderType_ItemJournalLine">
+          <DataField>OrderType_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="OrderNo_ItemJournalLine">
+          <DataField>OrderNo_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="OrderLineNo_ItemJournalLine">
+          <DataField>OrderLineNo_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="DimensionSetID_ItemJournalLine">
+          <DataField>DimensionSetID_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="NewDimensionSetID_ItemJournalLine">
+          <DataField>NewDimensionSetID_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="AssembletoOrder_ItemJournalLine">
+          <DataField>AssembletoOrder_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="JobNo_ItemJournalLine">
+          <DataField>JobNo_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="JobTaskNo_ItemJournalLine">
+          <DataField>JobTaskNo_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="JobPurchase_ItemJournalLine">
+          <DataField>JobPurchase_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="JobContractEntryNo_ItemJournalLine">
+          <DataField>JobContractEntryNo_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="VariantCode_ItemJournalLine">
+          <DataField>VariantCode_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="BinCode_ItemJournalLine">
+          <DataField>BinCode_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="QtyperUnitofMeasure_ItemJournalLine">
+          <DataField>QtyperUnitofMeasure_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="QtyperUnitofMeasure_ItemJournalLineFormat">
+          <DataField>QtyperUnitofMeasure_ItemJournalLineFormat</DataField>
+        </Field>
+        <Field Name="NewBinCode_ItemJournalLine">
+          <DataField>NewBinCode_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="UnitofMeasureCode_ItemJournalLine">
+          <DataField>UnitofMeasureCode_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="DerivedfromBlanketOrder_ItemJournalLine">
+          <DataField>DerivedfromBlanketOrder_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="QuantityBase_ItemJournalLine">
+          <DataField>QuantityBase_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="QuantityBase_ItemJournalLineFormat">
+          <DataField>QuantityBase_ItemJournalLineFormat</DataField>
+        </Field>
+        <Field Name="InvoicedQtyBase_ItemJournalLine">
+          <DataField>InvoicedQtyBase_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="InvoicedQtyBase_ItemJournalLineFormat">
+          <DataField>InvoicedQtyBase_ItemJournalLineFormat</DataField>
+        </Field>
+        <Field Name="ReservedQtyBase_ItemJournalLine">
+          <DataField>ReservedQtyBase_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="ReservedQtyBase_ItemJournalLineFormat">
+          <DataField>ReservedQtyBase_ItemJournalLineFormat</DataField>
+        </Field>
+        <Field Name="Level_ItemJournalLine">
+          <DataField>Level_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="FlushingMethod_ItemJournalLine">
+          <DataField>FlushingMethod_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="ChangedbyUser_ItemJournalLine">
+          <DataField>ChangedbyUser_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="CrossReferenceNo_ItemJournalLine">
+          <DataField>CrossReferenceNo_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="OriginallyOrderedNo_ItemJournalLine">
+          <DataField>OriginallyOrderedNo_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="OriginallyOrderedVarCode_ItemJournalLine">
+          <DataField>OriginallyOrderedVarCode_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="OutofStockSubstitution_ItemJournalLine">
+          <DataField>OutofStockSubstitution_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="ItemCategoryCode_ItemJournalLine">
+          <DataField>ItemCategoryCode_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="Nonstock_ItemJournalLine">
+          <DataField>Nonstock_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="PurchasingCode_ItemJournalLine">
+          <DataField>PurchasingCode_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="PlannedDeliveryDate_ItemJournalLine">
+          <DataField>PlannedDeliveryDate_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="OrderDate_ItemJournalLine">
+          <DataField>OrderDate_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="ValueEntryType_ItemJournalLine">
+          <DataField>ValueEntryType_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="ItemChargeNo_ItemJournalLine">
+          <DataField>ItemChargeNo_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="InventoryValueCalculated_ItemJournalLine">
+          <DataField>InventoryValueCalculated_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="InventoryValueCalculated_ItemJournalLineFormat">
+          <DataField>InventoryValueCalculated_ItemJournalLineFormat</DataField>
+        </Field>
+        <Field Name="InventoryValueRevalued_ItemJournalLine">
+          <DataField>InventoryValueRevalued_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="InventoryValueRevalued_ItemJournalLineFormat">
+          <DataField>InventoryValueRevalued_ItemJournalLineFormat</DataField>
+        </Field>
+        <Field Name="VarianceType_ItemJournalLine">
+          <DataField>VarianceType_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="InventoryValuePer_ItemJournalLine">
+          <DataField>InventoryValuePer_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="PartialRevaluation_ItemJournalLine">
+          <DataField>PartialRevaluation_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="AppliesfromEntry_ItemJournalLine">
+          <DataField>AppliesfromEntry_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="InvoiceNo_ItemJournalLine">
+          <DataField>InvoiceNo_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="UnitCostCalculated_ItemJournalLine">
+          <DataField>UnitCostCalculated_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="UnitCostCalculated_ItemJournalLineFormat">
+          <DataField>UnitCostCalculated_ItemJournalLineFormat</DataField>
+        </Field>
+        <Field Name="UnitCostRevalued_ItemJournalLine">
+          <DataField>UnitCostRevalued_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="UnitCostRevalued_ItemJournalLineFormat">
+          <DataField>UnitCostRevalued_ItemJournalLineFormat</DataField>
+        </Field>
+        <Field Name="AppliedAmount_ItemJournalLine">
+          <DataField>AppliedAmount_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="AppliedAmount_ItemJournalLineFormat">
+          <DataField>AppliedAmount_ItemJournalLineFormat</DataField>
+        </Field>
+        <Field Name="UpdateStandardCost_ItemJournalLine">
+          <DataField>UpdateStandardCost_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="AmountACY_ItemJournalLine">
+          <DataField>AmountACY_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="AmountACY_ItemJournalLineFormat">
+          <DataField>AmountACY_ItemJournalLineFormat</DataField>
+        </Field>
+        <Field Name="Correction_ItemJournalLine">
+          <DataField>Correction_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="Adjustment_ItemJournalLine">
+          <DataField>Adjustment_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="AppliestoValueEntry_ItemJournalLine">
+          <DataField>AppliestoValueEntry_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="InvoicetoSourceNo_ItemJournalLine">
+          <DataField>InvoicetoSourceNo_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="Type_ItemJournalLine">
+          <DataField>Type_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="No_ItemJournalLine">
+          <DataField>No_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="OperationNo_ItemJournalLine">
+          <DataField>OperationNo_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="WorkCenterNo_ItemJournalLine">
+          <DataField>WorkCenterNo_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="SetupTime_ItemJournalLine">
+          <DataField>SetupTime_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="SetupTime_ItemJournalLineFormat">
+          <DataField>SetupTime_ItemJournalLineFormat</DataField>
+        </Field>
+        <Field Name="RunTime_ItemJournalLine">
+          <DataField>RunTime_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="RunTime_ItemJournalLineFormat">
+          <DataField>RunTime_ItemJournalLineFormat</DataField>
+        </Field>
+        <Field Name="StopTime_ItemJournalLine">
+          <DataField>StopTime_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="StopTime_ItemJournalLineFormat">
+          <DataField>StopTime_ItemJournalLineFormat</DataField>
+        </Field>
+        <Field Name="OutputQuantity_ItemJournalLine">
+          <DataField>OutputQuantity_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="OutputQuantity_ItemJournalLineFormat">
+          <DataField>OutputQuantity_ItemJournalLineFormat</DataField>
+        </Field>
+        <Field Name="ScrapQuantity_ItemJournalLine">
+          <DataField>ScrapQuantity_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="ScrapQuantity_ItemJournalLineFormat">
+          <DataField>ScrapQuantity_ItemJournalLineFormat</DataField>
+        </Field>
+        <Field Name="ConcurrentCapacity_ItemJournalLine">
+          <DataField>ConcurrentCapacity_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="ConcurrentCapacity_ItemJournalLineFormat">
+          <DataField>ConcurrentCapacity_ItemJournalLineFormat</DataField>
+        </Field>
+        <Field Name="SetupTimeBase_ItemJournalLine">
+          <DataField>SetupTimeBase_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="SetupTimeBase_ItemJournalLineFormat">
+          <DataField>SetupTimeBase_ItemJournalLineFormat</DataField>
+        </Field>
+        <Field Name="RunTimeBase_ItemJournalLine">
+          <DataField>RunTimeBase_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="RunTimeBase_ItemJournalLineFormat">
+          <DataField>RunTimeBase_ItemJournalLineFormat</DataField>
+        </Field>
+        <Field Name="StopTimeBase_ItemJournalLine">
+          <DataField>StopTimeBase_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="StopTimeBase_ItemJournalLineFormat">
+          <DataField>StopTimeBase_ItemJournalLineFormat</DataField>
+        </Field>
+        <Field Name="OutputQuantityBase_ItemJournalLine">
+          <DataField>OutputQuantityBase_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="OutputQuantityBase_ItemJournalLineFormat">
+          <DataField>OutputQuantityBase_ItemJournalLineFormat</DataField>
+        </Field>
+        <Field Name="ScrapQuantityBase_ItemJournalLine">
+          <DataField>ScrapQuantityBase_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="ScrapQuantityBase_ItemJournalLineFormat">
+          <DataField>ScrapQuantityBase_ItemJournalLineFormat</DataField>
+        </Field>
+        <Field Name="CapUnitofMeasureCode_ItemJournalLine">
+          <DataField>CapUnitofMeasureCode_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="QtyperCapUnitofMeasure_ItemJournalLine">
+          <DataField>QtyperCapUnitofMeasure_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="QtyperCapUnitofMeasure_ItemJournalLineFormat">
+          <DataField>QtyperCapUnitofMeasure_ItemJournalLineFormat</DataField>
+        </Field>
+        <Field Name="StartingTime_ItemJournalLine">
+          <DataField>StartingTime_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="EndingTime_ItemJournalLine">
+          <DataField>EndingTime_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="RoutingNo_ItemJournalLine">
+          <DataField>RoutingNo_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="RoutingReferenceNo_ItemJournalLine">
+          <DataField>RoutingReferenceNo_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="ProdOrderCompLineNo_ItemJournalLine">
+          <DataField>ProdOrderCompLineNo_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="Finished_ItemJournalLine">
+          <DataField>Finished_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="UnitCostCalculation_ItemJournalLine">
+          <DataField>UnitCostCalculation_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="Subcontracting_ItemJournalLine">
+          <DataField>Subcontracting_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="StopCode_ItemJournalLine">
+          <DataField>StopCode_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="ScrapCode_ItemJournalLine">
+          <DataField>ScrapCode_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="WorkCenterGroupCode_ItemJournalLine">
+          <DataField>WorkCenterGroupCode_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="WorkShiftCode_ItemJournalLine">
+          <DataField>WorkShiftCode_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="SerialNo_ItemJournalLine">
+          <DataField>SerialNo_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="LotNo_ItemJournalLine">
+          <DataField>LotNo_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="WarrantyDate_ItemJournalLine">
+          <DataField>WarrantyDate_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="NewSerialNo_ItemJournalLine">
+          <DataField>NewSerialNo_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="NewLotNo_ItemJournalLine">
+          <DataField>NewLotNo_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="NewItemExpirationDate_ItemJournalLine">
+          <DataField>NewItemExpirationDate_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="ItemExpirationDate_ItemJournalLine">
+          <DataField>ItemExpirationDate_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="ReturnReasonCode_ItemJournalLine">
+          <DataField>ReturnReasonCode_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="WarehouseAdjustment_ItemJournalLine">
+          <DataField>WarehouseAdjustment_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="DirectTransfer_ItemJournalLine">
+          <DataField>DirectTransfer_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="PhysInvtCountingPeriodCode_ItemJournalLine">
+          <DataField>PhysInvtCountingPeriodCode_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="PhysInvtCountingPeriodType_ItemJournalLine">
+          <DataField>PhysInvtCountingPeriodType_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="OverheadRate_ItemJournalLine">
+          <DataField>OverheadRate_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="OverheadRate_ItemJournalLineFormat">
+          <DataField>OverheadRate_ItemJournalLineFormat</DataField>
+        </Field>
+        <Field Name="SingleLevelMaterialCost_ItemJournalLine">
+          <DataField>SingleLevelMaterialCost_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="SingleLevelMaterialCost_ItemJournalLineFormat">
+          <DataField>SingleLevelMaterialCost_ItemJournalLineFormat</DataField>
+        </Field>
+        <Field Name="SingleLevelCapacityCost_ItemJournalLine">
+          <DataField>SingleLevelCapacityCost_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="SingleLevelCapacityCost_ItemJournalLineFormat">
+          <DataField>SingleLevelCapacityCost_ItemJournalLineFormat</DataField>
+        </Field>
+        <Field Name="SingleLevelSubcontrdCost_ItemJournalLine">
+          <DataField>SingleLevelSubcontrdCost_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="SingleLevelSubcontrdCost_ItemJournalLineFormat">
+          <DataField>SingleLevelSubcontrdCost_ItemJournalLineFormat</DataField>
+        </Field>
+        <Field Name="SingleLevelCapOvhdCost_ItemJournalLine">
+          <DataField>SingleLevelCapOvhdCost_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="SingleLevelCapOvhdCost_ItemJournalLineFormat">
+          <DataField>SingleLevelCapOvhdCost_ItemJournalLineFormat</DataField>
+        </Field>
+        <Field Name="SingleLevelMfgOvhdCost_ItemJournalLine">
+          <DataField>SingleLevelMfgOvhdCost_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="SingleLevelMfgOvhdCost_ItemJournalLineFormat">
+          <DataField>SingleLevelMfgOvhdCost_ItemJournalLineFormat</DataField>
+        </Field>
+        <Field Name="RolledupMaterialCost_ItemJournalLine">
+          <DataField>RolledupMaterialCost_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="RolledupMaterialCost_ItemJournalLineFormat">
+          <DataField>RolledupMaterialCost_ItemJournalLineFormat</DataField>
+        </Field>
+        <Field Name="RolledupCapacityCost_ItemJournalLine">
+          <DataField>RolledupCapacityCost_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="RolledupCapacityCost_ItemJournalLineFormat">
+          <DataField>RolledupCapacityCost_ItemJournalLineFormat</DataField>
+        </Field>
+        <Field Name="RolledupSubcontractedCost_ItemJournalLine">
+          <DataField>RolledupSubcontractedCost_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="RolledupSubcontractedCost_ItemJournalLineFormat">
+          <DataField>RolledupSubcontractedCost_ItemJournalLineFormat</DataField>
+        </Field>
+        <Field Name="RolledupMfgOvhdCost_ItemJournalLine">
+          <DataField>RolledupMfgOvhdCost_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="RolledupMfgOvhdCost_ItemJournalLineFormat">
+          <DataField>RolledupMfgOvhdCost_ItemJournalLineFormat</DataField>
+        </Field>
+        <Field Name="RolledupCapOverheadCost_ItemJournalLine">
+          <DataField>RolledupCapOverheadCost_ItemJournalLine</DataField>
+        </Field>
+        <Field Name="RolledupCapOverheadCost_ItemJournalLineFormat">
+          <DataField>RolledupCapOverheadCost_ItemJournalLineFormat</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Name">
+          <DataField>CompanyInfo_Name</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Address">
+          <DataField>CompanyInfo_Address</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Address2">
+          <DataField>CompanyInfo_Address2</DataField>
+        </Field>
+        <Field Name="pic">
+          <DataField>pic</DataField>
+        </Field>
+        <Field Name="CompanyInfo_City">
+          <DataField>CompanyInfo_City</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Phone">
+          <DataField>CompanyInfo_Phone</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Fax">
+          <DataField>CompanyInfo_Fax</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Picture">
+          <DataField>CompanyInfo_Picture</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Email">
+          <DataField>CompanyInfo_Email</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Web">
+          <DataField>CompanyInfo_Web</DataField>
+        </Field>
+        <Field Name="SequenceNo">
+          <DataField>SequenceNo</DataField>
+        </Field>
+        <Field Name="LastDateTimeModified">
+          <DataField>LastDateTimeModified</DataField>
+        </Field>
+        <Field Name="ApproverID">
+          <DataField>ApproverID</DataField>
+        </Field>
+        <Field Name="ApproverID_ApprovalEntry">
+          <DataField>ApproverID_ApprovalEntry</DataField>
+        </Field>
+        <Field Name="SenderID">
+          <DataField>SenderID</DataField>
+        </Field>
+        <Field Name="EmployeeFirstName">
+          <DataField>EmployeeFirstName</DataField>
+        </Field>
+        <Field Name="EmployeeMiddleName">
+          <DataField>EmployeeMiddleName</DataField>
+        </Field>
+        <Field Name="EmployeeLastName">
+          <DataField>EmployeeLastName</DataField>
+        </Field>
+        <Field Name="EmployeeSignature">
+          <DataField>EmployeeSignature</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="EmployerName">
+          <DataField>EmployerName</DataField>
+        </Field>
+        <Field Name="TitleText">
+          <DataField>TitleText</DataField>
+        </Field>
+        <Field Name="FORMAT_TODAY_0_4_">
+          <DataField>FORMAT_TODAY_0_4_</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENO">
+          <DataField>CurrReport_PAGENO</DataField>
+        </Field>
+        <Field Name="USERID">
+          <DataField>USERID</DataField>
+        </Field>
+        <Field Name="Periods__Period_Month_">
+          <DataField>Periods__Period_Month_</DataField>
+        </Field>
+        <Field Name="EmployerNo">
+          <DataField>EmployerNo</DataField>
+        </Field>
+        <Field Name="Periods_Description">
+          <DataField>Periods_Description</DataField>
+        </Field>
+        <Field Name="TotalAmountArray_2_">
+          <DataField>TotalAmountArray_2_</DataField>
+        </Field>
+        <Field Name="TotalAmountArray_2_Format">
+          <DataField>TotalAmountArray_2_Format</DataField>
+        </Field>
+        <Field Name="TotalAmountArray_1_">
+          <DataField>TotalAmountArray_1_</DataField>
+        </Field>
+        <Field Name="TotalAmountArray_1_Format">
+          <DataField>TotalAmountArray_1_Format</DataField>
+        </Field>
+        <Field Name="TotalAmountArray_3_">
+          <DataField>TotalAmountArray_3_</DataField>
+        </Field>
+        <Field Name="TotalAmountArray_3_Format">
+          <DataField>TotalAmountArray_3_Format</DataField>
+        </Field>
+        <Field Name="Counter">
+          <DataField>Counter</DataField>
+        </Field>
+        <Field Name="TotalCounter">
+          <DataField>TotalCounter</DataField>
+        </Field>
+        <Field Name="Employee_ContributionCaption">
+          <DataField>Employee_ContributionCaption</DataField>
+        </Field>
+        <Field Name="NameCaption">
+          <DataField>NameCaption</DataField>
+        </Field>
+        <Field Name="No_Caption">
+          <DataField>No_Caption</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENOCaption">
+          <DataField>CurrReport_PAGENOCaption</DataField>
+        </Field>
+        <Field Name="Employer_ContributionCaption">
+          <DataField>Employer_ContributionCaption</DataField>
+        </Field>
+        <Field Name="Monthly_TotalCaption">
+          <DataField>Monthly_TotalCaption</DataField>
+        </Field>
+        <Field Name="Membership_No_Caption">
+          <DataField>Membership_No_Caption</DataField>
+        </Field>
+        <Field Name="Periods__Period_Month_Caption">
+          <DataField>Periods__Period_Month_Caption</DataField>
+        </Field>
+        <Field Name="EmployerNoCaption">
+          <DataField>EmployerNoCaption</DataField>
+        </Field>
+        <Field Name="Periods_DescriptionCaption">
+          <DataField>Periods_DescriptionCaption</DataField>
+        </Field>
+        <Field Name="RemarksCaption">
+          <DataField>RemarksCaption</DataField>
+        </Field>
+        <Field Name="TotalsCaption">
+          <DataField>TotalsCaption</DataField>
+        </Field>
+        <Field Name="CounterCaption">
+          <DataField>CounterCaption</DataField>
+        </Field>
+        <Field Name="DataItem1102754028">
+          <DataField>DataItem1102754028</DataField>
+        </Field>
+        <Field Name="DataItem1102754029">
+          <DataField>DataItem1102754029</DataField>
+        </Field>
+        <Field Name="DataItem1102754030">
+          <DataField>DataItem1102754030</DataField>
+        </Field>
+        <Field Name="DataItem1102754031">
+          <DataField>DataItem1102754031</DataField>
+        </Field>
+        <Field Name="DataItem1102754032">
+          <DataField>DataItem1102754032</DataField>
+        </Field>
+        <Field Name="DataItem1102754033">
+          <DataField>DataItem1102754033</DataField>
+        </Field>
+        <Field Name="DataItem1102754034">
+          <DataField>DataItem1102754034</DataField>
+        </Field>
+        <Field Name="DataItem1102754035">
+          <DataField>DataItem1102754035</DataField>
+        </Field>
+        <Field Name="DataItem1102754036">
+          <DataField>DataItem1102754036</DataField>
+        </Field>
+        <Field Name="DataItem1102754037">
+          <DataField>DataItem1102754037</DataField>
+        </Field>
+        <Field Name="For_Official_use_onlyCaption">
+          <DataField>For_Official_use_onlyCaption</DataField>
+        </Field>
+        <Field Name="DataItem1102754039">
+          <DataField>DataItem1102754039</DataField>
+        </Field>
+        <Field Name="DataItem1102754040">
+          <DataField>DataItem1102754040</DataField>
+        </Field>
+        <Field Name="DataItem1102754041">
+          <DataField>DataItem1102754041</DataField>
+        </Field>
+        <Field Name="DataItem1102754042">
+          <DataField>DataItem1102754042</DataField>
+        </Field>
+        <Field Name="NB_THIS_FORM_IS_INVALID_WITHOUT_THE_OFFICIAL_RUBBER_STAMP_OF_THE_EMPLOYERCaption">
+          <DataField>NB_THIS_FORM_IS_INVALID_WITHOUT_THE_OFFICIAL_RUBBER_STAMP_OF_THE_EMPLOYERCaption</DataField>
+        </Field>
+        <Field Name="Certified_correct_by_Company_Authorised_Officer_Caption">
+          <DataField>Certified_correct_by_Company_Authorised_Officer_Caption</DataField>
+        </Field>
+        <Field Name="Periods_Period_ID">
+          <DataField>Periods_Period_ID</DataField>
+        </Field>
+        <Field Name="Periods_Period_Year">
+          <DataField>Periods_Period_Year</DataField>
+        </Field>
+        <Field Name="Periods_Payroll_Code">
+          <DataField>Periods_Payroll_Code</DataField>
+        </Field>
+        <Field Name="Employee_Name">
+          <DataField>Employee_Name</DataField>
+        </Field>
+        <Field Name="Surname">
+          <DataField>Surname</DataField>
+        </Field>
+        <Field Name="OtherNames">
+          <DataField>OtherNames</DataField>
+        </Field>
+        <Field Name="Employee__No__">
+          <DataField>Employee__No__</DataField>
+        </Field>
+        <Field Name="IDNo">
+          <DataField>IDNo</DataField>
+        </Field>
+        <Field Name="PINNo">
+          <DataField>PINNo</DataField>
+        </Field>
+        <Field Name="NSSFNo">
+          <DataField>NSSFNo</DataField>
+        </Field>
+        <Field Name="PeriodAmountArray_1_">
+          <DataField>PeriodAmountArray_1_</DataField>
+        </Field>
+        <Field Name="PeriodAmountArray_1_Format">
+          <DataField>PeriodAmountArray_1_Format</DataField>
+        </Field>
+        <Field Name="PeriodAmountArray_3_">
+          <DataField>PeriodAmountArray_3_</DataField>
+        </Field>
+        <Field Name="PeriodAmountArray_3_Format">
+          <DataField>PeriodAmountArray_3_Format</DataField>
+        </Field>
+        <Field Name="PeriodAmountArray_2_">
+          <DataField>PeriodAmountArray_2_</DataField>
+        </Field>
+        <Field Name="PeriodAmountArray_2_Format">
+          <DataField>PeriodAmountArray_2_Format</DataField>
+        </Field>
+        <Field Name="FORMAT_EmployeeRec__Membership_No___">
+          <DataField>FORMAT_EmployeeRec__Membership_No___</DataField>
+        </Field>
+        <Field Name="RtcCounter">
+          <DataField>RtcCounter</DataField>
+        </Field>
+        <Field Name="GrossPay">
+          <DataField>GrossPay</DataField>
+        </Field>
+        <Field Name="GrossPayFormat">
+          <DataField>GrossPayFormat</DataField>
+        </Field>
+        <Field Name="Voluntary">
+          <DataField>Voluntary</DataField>
+        </Field>
+        <Field Name="VoluntaryFormat">
+          <DataField>VoluntaryFormat</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

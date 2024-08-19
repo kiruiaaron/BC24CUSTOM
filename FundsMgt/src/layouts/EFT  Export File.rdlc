@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="PaymentMode_PaymentHeader">
+          <DataField>PaymentMode_PaymentHeader</DataField>
+        </Field>
+        <Field Name="TotalAmount_PaymentHeader">
+          <DataField>TotalAmount_PaymentHeader</DataField>
+        </Field>
+        <Field Name="TotalAmount_PaymentHeaderFormat">
+          <DataField>TotalAmount_PaymentHeaderFormat</DataField>
+        </Field>
+        <Field Name="TotalAmountLCY_PaymentHeader">
+          <DataField>TotalAmountLCY_PaymentHeader</DataField>
+        </Field>
+        <Field Name="TotalAmountLCY_PaymentHeaderFormat">
+          <DataField>TotalAmountLCY_PaymentHeaderFormat</DataField>
+        </Field>
+        <Field Name="VATAmount_PaymentHeader">
+          <DataField>VATAmount_PaymentHeader</DataField>
+        </Field>
+        <Field Name="VATAmount_PaymentHeaderFormat">
+          <DataField>VATAmount_PaymentHeaderFormat</DataField>
+        </Field>
+        <Field Name="VATAmountLCY_PaymentHeader">
+          <DataField>VATAmountLCY_PaymentHeader</DataField>
+        </Field>
+        <Field Name="VATAmountLCY_PaymentHeaderFormat">
+          <DataField>VATAmountLCY_PaymentHeaderFormat</DataField>
+        </Field>
+        <Field Name="BankAccountNo_PaymentHeader">
+          <DataField>BankAccountNo_PaymentHeader</DataField>
+        </Field>
+        <Field Name="BankAccountName_PaymentHeader">
+          <DataField>BankAccountName_PaymentHeader</DataField>
+        </Field>
+        <Field Name="BankAccountBalance_PaymentHeader">
+          <DataField>BankAccountBalance_PaymentHeader</DataField>
+        </Field>
+        <Field Name="BankAccountBalance_PaymentHeaderFormat">
+          <DataField>BankAccountBalance_PaymentHeaderFormat</DataField>
+        </Field>
+        <Field Name="No_PaymentHeader">
+          <DataField>No_PaymentHeader</DataField>
+        </Field>
+        <Field Name="DocumentType_PaymentHeader">
+          <DataField>DocumentType_PaymentHeader</DataField>
+        </Field>
+        <Field Name="DocumentDate_PaymentHeader">
+          <DataField>DocumentDate_PaymentHeader</DataField>
+        </Field>
+        <Field Name="PostingDate_PaymentHeader">
+          <DataField>PostingDate_PaymentHeader</DataField>
+        </Field>
+        <Field Name="ReferenceNo_PaymentHeader">
+          <DataField>ReferenceNo_PaymentHeader</DataField>
+        </Field>
+        <Field Name="PayeeNo_PaymentHeader">
+          <DataField>PayeeNo_PaymentHeader</DataField>
+        </Field>
+        <Field Name="PayeeName_PaymentHeader">
+          <DataField>PayeeName_PaymentHeader</DataField>
+        </Field>
+        <Field Name="PhoneNo">
+          <DataField>PhoneNo</DataField>
+        </Field>
+        <Field Name="AccountNo">
+          <DataField>AccountNo</DataField>
+        </Field>
+        <Field Name="BankAcc">
+          <DataField>BankAcc</DataField>
+        </Field>
+        <Field Name="BankCode">
+          <DataField>BankCode</DataField>
+        </Field>
+        <Field Name="SupplierBankAccount">
+          <DataField>SupplierBankAccount</DataField>
+        </Field>
+        <Field Name="Description_PaymentHeader">
+          <DataField>Description_PaymentHeader</DataField>
+        </Field>
+        <Field Name="ReportDate">
+          <DataField>ReportDate</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

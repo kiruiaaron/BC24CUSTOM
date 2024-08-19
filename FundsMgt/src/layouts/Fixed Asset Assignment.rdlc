@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="CompanyInfo_Name">
+          <DataField>CompanyInfo_Name</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Address">
+          <DataField>CompanyInfo_Address</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Address2">
+          <DataField>CompanyInfo_Address2</DataField>
+        </Field>
+        <Field Name="pic">
+          <DataField>pic</DataField>
+        </Field>
+        <Field Name="CompanyInfo_City">
+          <DataField>CompanyInfo_City</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Phone">
+          <DataField>CompanyInfo_Phone</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Fax">
+          <DataField>CompanyInfo_Fax</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Picture">
+          <DataField>CompanyInfo_Picture</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Email">
+          <DataField>CompanyInfo_Email</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Web">
+          <DataField>CompanyInfo_Web</DataField>
+        </Field>
+        <Field Name="No_FixedAsset">
+          <DataField>No_FixedAsset</DataField>
+        </Field>
+        <Field Name="Description_FixedAsset">
+          <DataField>Description_FixedAsset</DataField>
+        </Field>
+        <Field Name="SearchDescription_FixedAsset">
+          <DataField>SearchDescription_FixedAsset</DataField>
+        </Field>
+        <Field Name="Description2_FixedAsset">
+          <DataField>Description2_FixedAsset</DataField>
+        </Field>
+        <Field Name="FAClassCode_FixedAsset">
+          <DataField>FAClassCode_FixedAsset</DataField>
+        </Field>
+        <Field Name="FASubclassCode_FixedAsset">
+          <DataField>FASubclassCode_FixedAsset</DataField>
+        </Field>
+        <Field Name="GlobalDimension1Code_FixedAsset">
+          <DataField>GlobalDimension1Code_FixedAsset</DataField>
+        </Field>
+        <Field Name="GlobalDimension2Code_FixedAsset">
+          <DataField>GlobalDimension2Code_FixedAsset</DataField>
+        </Field>
+        <Field Name="LocationCode_FixedAsset">
+          <DataField>LocationCode_FixedAsset</DataField>
+        </Field>
+        <Field Name="FALocationCode_FixedAsset">
+          <DataField>FALocationCode_FixedAsset</DataField>
+        </Field>
+        <Field Name="VendorNo_FixedAsset">
+          <DataField>VendorNo_FixedAsset</DataField>
+        </Field>
+        <Field Name="MainAssetComponent_FixedAsset">
+          <DataField>MainAssetComponent_FixedAsset</DataField>
+        </Field>
+        <Field Name="ComponentofMainAsset_FixedAsset">
+          <DataField>ComponentofMainAsset_FixedAsset</DataField>
+        </Field>
+        <Field Name="BudgetedAsset_FixedAsset">
+          <DataField>BudgetedAsset_FixedAsset</DataField>
+        </Field>
+        <Field Name="WarrantyDate_FixedAsset">
+          <DataField>WarrantyDate_FixedAsset</DataField>
+        </Field>
+        <Field Name="ResponsibleEmployee_FixedAsset">
+          <DataField>ResponsibleEmployee_FixedAsset</DataField>
+        </Field>
+        <Field Name="SerialNo_FixedAsset">
+          <DataField>SerialNo_FixedAsset</DataField>
+        </Field>
+        <Field Name="LastDateModified_FixedAsset">
+          <DataField>LastDateModified_FixedAsset</DataField>
+        </Field>
+        <Field Name="Insured_FixedAsset">
+          <DataField>Insured_FixedAsset</DataField>
+        </Field>
+        <Field Name="Comment_FixedAsset">
+          <DataField>Comment_FixedAsset</DataField>
+        </Field>
+        <Field Name="Blocked_FixedAsset">
+          <DataField>Blocked_FixedAsset</DataField>
+        </Field>
+        <Field Name="MaintenanceVendorNo_FixedAsset">
+          <DataField>MaintenanceVendorNo_FixedAsset</DataField>
+        </Field>
+        <Field Name="UnderMaintenance_FixedAsset">
+          <DataField>UnderMaintenance_FixedAsset</DataField>
+        </Field>
+        <Field Name="NextServiceDate_FixedAsset">
+          <DataField>NextServiceDate_FixedAsset</DataField>
+        </Field>
+        <Field Name="Inactive_FixedAsset">
+          <DataField>Inactive_FixedAsset</DataField>
+        </Field>
+        <Field Name="FAPostingDateFilter_FixedAsset">
+          <DataField>FAPostingDateFilter_FixedAsset</DataField>
+        </Field>
+        <Field Name="NoSeries_FixedAsset">
+          <DataField>NoSeries_FixedAsset</DataField>
+        </Field>
+        <Field Name="FAPostingGroup_FixedAsset">
+          <DataField>FAPostingGroup_FixedAsset</DataField>
+        </Field>
+        <Field Name="Acquired_FixedAsset">
+          <DataField>Acquired_FixedAsset</DataField>
+        </Field>
+        <Field Name="Image_FixedAsset">
+          <DataField>Image_FixedAsset</DataField>
+        </Field>
+        <Field Name="SequenceNo">
+          <DataField>SequenceNo</DataField>
+        </Field>
+        <Field Name="LastDateTimeModified">
+          <DataField>LastDateTimeModified</DataField>
+        </Field>
+        <Field Name="ApproverID">
+          <DataField>ApproverID</DataField>
+        </Field>
+        <Field Name="ApproverID_ApprovalEntry">
+          <DataField>ApproverID_ApprovalEntry</DataField>
+        </Field>
+        <Field Name="SenderID">
+          <DataField>SenderID</DataField>
+        </Field>
+        <Field Name="EmployeeFirstName">
+          <DataField>EmployeeFirstName</DataField>
+        </Field>
+        <Field Name="EmployeeMiddleName">
+          <DataField>EmployeeMiddleName</DataField>
+        </Field>
+        <Field Name="EmployeeLastName">
+          <DataField>EmployeeLastName</DataField>
+        </Field>
+        <Field Name="EmployeeSignature">
+          <DataField>EmployeeSignature</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="MaleTotals6">
+          <DataField>MaleTotals6</DataField>
+        </Field>
+        <Field Name="MaleTotals5">
+          <DataField>MaleTotals5</DataField>
+        </Field>
+        <Field Name="MaleTotals4">
+          <DataField>MaleTotals4</DataField>
+        </Field>
+        <Field Name="MaleTotals3">
+          <DataField>MaleTotals3</DataField>
+        </Field>
+        <Field Name="MaleTotals2">
+          <DataField>MaleTotals2</DataField>
+        </Field>
+        <Field Name="MaleTotals1">
+          <DataField>MaleTotals1</DataField>
+        </Field>
+        <Field Name="FemaleTotals6">
+          <DataField>FemaleTotals6</DataField>
+        </Field>
+        <Field Name="FemaleTotals5">
+          <DataField>FemaleTotals5</DataField>
+        </Field>
+        <Field Name="FemaleTotals4">
+          <DataField>FemaleTotals4</DataField>
+        </Field>
+        <Field Name="FemaleTotals3">
+          <DataField>FemaleTotals3</DataField>
+        </Field>
+        <Field Name="FemaleTotals2">
+          <DataField>FemaleTotals2</DataField>
+        </Field>
+        <Field Name="FemaleTotals1">
+          <DataField>FemaleTotals1</DataField>
+        </Field>
+        <Field Name="MaleTotals1MaleTotals2MaleTotals3MaleTotals4MaleTotals5MaleTotals6">
+          <DataField>MaleTotals1MaleTotals2MaleTotals3MaleTotals4MaleTotals5MaleTotals6</DataField>
+        </Field>
+        <Field Name="FemaleTotals1FemaleTotals2FemaleTotals3FemaleTotals4FemaleTotals5FemaleTotals6">
+          <DataField>FemaleTotals1FemaleTotals2FemaleTotals3FemaleTotals4FemaleTotals5FemaleTotals6</DataField>
+        </Field>
+        <Field Name="FemaleTotals1MaleTotals1">
+          <DataField>FemaleTotals1MaleTotals1</DataField>
+        </Field>
+        <Field Name="FemaleTotals2MaleTotals2">
+          <DataField>FemaleTotals2MaleTotals2</DataField>
+        </Field>
+        <Field Name="FemaleTotals3MaleTotals3">
+          <DataField>FemaleTotals3MaleTotals3</DataField>
+        </Field>
+        <Field Name="FemaleTotals4MaleTotals4">
+          <DataField>FemaleTotals4MaleTotals4</DataField>
+        </Field>
+        <Field Name="FemaleTotals5MaleTotals5">
+          <DataField>FemaleTotals5MaleTotals5</DataField>
+        </Field>
+        <Field Name="FemaleTotals6MaleTotals6">
+          <DataField>FemaleTotals6MaleTotals6</DataField>
+        </Field>
+        <Field Name="DataItem1101951050">
+          <DataField>DataItem1101951050</DataField>
+        </Field>
+        <Field Name="Employee_No_">
+          <DataField>Employee_No_</DataField>
+        </Field>
+        <Field Name="HEADER1">
+          <DataField>HEADER1</DataField>
+        </Field>
+        <Field Name="HEADER2">
+          <DataField>HEADER2</DataField>
+        </Field>
+        <Field Name="HEADER3">
+          <DataField>HEADER3</DataField>
+        </Field>
+        <Field Name="HEADER4">
+          <DataField>HEADER4</DataField>
+        </Field>
+        <Field Name="HEADER5">
+          <DataField>HEADER5</DataField>
+        </Field>
+        <Field Name="HEADER6">
+          <DataField>HEADER6</DataField>
+        </Field>
+        <Field Name="TOTAL">
+          <DataField>TOTAL</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

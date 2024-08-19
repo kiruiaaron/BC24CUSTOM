@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="FORMATTODAY04">
+          <DataField>FORMATTODAY04</DataField>
+        </Field>
+        <Field Name="COMPANYNAME">
+          <DataField>COMPANYNAME</DataField>
+        </Field>
+        <Field Name="CurrReportPAGENO">
+          <DataField>CurrReportPAGENO</DataField>
+        </Field>
+        <Field Name="USERID">
+          <DataField>USERID</DataField>
+        </Field>
+        <Field Name="Description_Periods">
+          <DataField>Description_Periods</DataField>
+        </Field>
+        <Field Name="gvPeriodTotalAmount">
+          <DataField>gvPeriodTotalAmount</DataField>
+        </Field>
+        <Field Name="gvPeriodTotalAmountFormat">
+          <DataField>gvPeriodTotalAmountFormat</DataField>
+        </Field>
+        <Field Name="PeriodID_Periods">
+          <DataField>PeriodID_Periods</DataField>
+        </Field>
+        <Field Name="Periods_Period_Month">
+          <DataField>Periods_Period_Month</DataField>
+        </Field>
+        <Field Name="Periods_Period_Year">
+          <DataField>Periods_Period_Year</DataField>
+        </Field>
+        <Field Name="Periods_Payroll_Code">
+          <DataField>Periods_Payroll_Code</DataField>
+        </Field>
+        <Field Name="Name_EmployeeBankAccount">
+          <DataField>Name_EmployeeBankAccount</DataField>
+        </Field>
+        <Field Name="Branch_EmployeeBankAccount">
+          <DataField>Branch_EmployeeBankAccount</DataField>
+        </Field>
+        <Field Name="Address_EmployeeBankAccount">
+          <DataField>Address_EmployeeBankAccount</DataField>
+        </Field>
+        <Field Name="City_EmployeeBankAccount">
+          <DataField>City_EmployeeBankAccount</DataField>
+        </Field>
+        <Field Name="gvBankTotalAmount">
+          <DataField>gvBankTotalAmount</DataField>
+        </Field>
+        <Field Name="gvBankTotalAmountFormat">
+          <DataField>gvBankTotalAmountFormat</DataField>
+        </Field>
+        <Field Name="Name_EmployeeBankAccount1">
+          <DataField>Name_EmployeeBankAccount1</DataField>
+        </Field>
+        <Field Name="Branch_EmployeeBankAccount1">
+          <DataField>Branch_EmployeeBankAccount1</DataField>
+        </Field>
+        <Field Name="Employee_Bank_Account_No_">
+          <DataField>Employee_Bank_Account_No_</DataField>
+        </Field>
+        <Field Name="No_Employee">
+          <DataField>No_Employee</DataField>
+        </Field>
+        <Field Name="FullName">
+          <DataField>FullName</DataField>
+        </Field>
+        <Field Name="BankAccountNo_Employee">
+          <DataField>BankAccountNo_Employee</DataField>
+        </Field>
+        <Field Name="gvAmount">
+          <DataField>gvAmount</DataField>
+        </Field>
+        <Field Name="gvAmountFormat">
+          <DataField>gvAmountFormat</DataField>
+        </Field>
+        <Field Name="Employee_Bank_Code">
+          <DataField>Employee_Bank_Code</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

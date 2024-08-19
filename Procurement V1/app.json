@@ -1,0 +1,48 @@
+{
+  "id": "06ad972e-b594-44a8-a8ff-ef85e99ea8c9",
+  "name": "Procurement V1",
+  "publisher": "Default Publisher",
+  "version": "1.0.0.0",
+  "brief": "",
+  "description": "",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "dependencies": [ { "id": "b682a973-5bb5-41e7-a829-b26143a6eb99",
+  "name": "UserMgt V1",
+  "version": "1.0.0.0",
+  "publisher": "Default Publisher"
+},
+{
+  "id": "c97cd68a-5b9a-4b95-929c-bf8bb896f0b8",
+  "name": "FundsMgt",
+  "publisher": "Default Publisher",
+  "version": "1.0.0.0"
+},
+{
+  "id": "d452dee8-df29-45ee-b503-8faf94765bc5",
+  "name": "HRMIS V1",
+  "publisher": "Default Publisher",
+  "version": "1.0.0.0"
+}],
+  "screenshots": [],
+  "platform": "1.0.0.0",
+  "application": "24.0.0.0",
+  "idRanges": [
+    {
+      "from": 50000,
+      "to": 50999
+    }
+  ],
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": true,
+    "includeSourceInSymbolFile": true
+  },
+  "runtime": "13.0",
+  "features": [
+    "NoImplicitWith"
+  ]
+}

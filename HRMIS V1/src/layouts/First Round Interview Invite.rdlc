@@ -1,0 +1,356 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="No_HRJobApplications">
+          <DataField>No_HRJobApplications</DataField>
+        </Field>
+        <Field Name="EmployeeRequisitionNo_HRJobApplications">
+          <DataField>EmployeeRequisitionNo_HRJobApplications</DataField>
+        </Field>
+        <Field Name="Surname_HRJobApplications">
+          <DataField>Surname_HRJobApplications</DataField>
+        </Field>
+        <Field Name="Firstname_HRJobApplications">
+          <DataField>Firstname_HRJobApplications</DataField>
+        </Field>
+        <Field Name="Middlename_HRJobApplications">
+          <DataField>Middlename_HRJobApplications</DataField>
+        </Field>
+        <Field Name="Gender_HRJobApplications">
+          <DataField>Gender_HRJobApplications</DataField>
+        </Field>
+        <Field Name="DateofBirth_HRJobApplications">
+          <DataField>DateofBirth_HRJobApplications</DataField>
+        </Field>
+        <Field Name="Age_HRJobApplications">
+          <DataField>Age_HRJobApplications</DataField>
+        </Field>
+        <Field Name="PostalAddress_HRJobApplications">
+          <DataField>PostalAddress_HRJobApplications</DataField>
+        </Field>
+        <Field Name="ResidentialAddress_HRJobApplications">
+          <DataField>ResidentialAddress_HRJobApplications</DataField>
+        </Field>
+        <Field Name="PostCode_HRJobApplications">
+          <DataField>PostCode_HRJobApplications</DataField>
+        </Field>
+        <Field Name="CityTown_HRJobApplications">
+          <DataField>CityTown_HRJobApplications</DataField>
+        </Field>
+        <Field Name="County_HRJobApplications">
+          <DataField>County_HRJobApplications</DataField>
+        </Field>
+        <Field Name="CountyName_HRJobApplications">
+          <DataField>CountyName_HRJobApplications</DataField>
+        </Field>
+        <Field Name="SubCounty_HRJobApplications">
+          <DataField>SubCounty_HRJobApplications</DataField>
+        </Field>
+        <Field Name="SubCountyName_HRJobApplications">
+          <DataField>SubCountyName_HRJobApplications</DataField>
+        </Field>
+        <Field Name="Country_HRJobApplications">
+          <DataField>Country_HRJobApplications</DataField>
+        </Field>
+        <Field Name="AlternativePhoneNo_HRJobApplications">
+          <DataField>AlternativePhoneNo_HRJobApplications</DataField>
+        </Field>
+        <Field Name="MobilePhoneNo_HRJobApplications">
+          <DataField>MobilePhoneNo_HRJobApplications</DataField>
+        </Field>
+        <Field Name="PersonalEmailAddress_HRJobApplications">
+          <DataField>PersonalEmailAddress_HRJobApplications</DataField>
+        </Field>
+        <Field Name="BirthCertificateNo_HRJobApplications">
+          <DataField>BirthCertificateNo_HRJobApplications</DataField>
+        </Field>
+        <Field Name="NationalIDNo_HRJobApplications">
+          <DataField>NationalIDNo_HRJobApplications</DataField>
+        </Field>
+        <Field Name="PassportNo_HRJobApplications">
+          <DataField>PassportNo_HRJobApplications</DataField>
+        </Field>
+        <Field Name="DrivingLicenceNo_HRJobApplications">
+          <DataField>DrivingLicenceNo_HRJobApplications</DataField>
+        </Field>
+        <Field Name="MaritalStatus_HRJobApplications">
+          <DataField>MaritalStatus_HRJobApplications</DataField>
+        </Field>
+        <Field Name="Citizenship_HRJobApplications">
+          <DataField>Citizenship_HRJobApplications</DataField>
+        </Field>
+        <Field Name="Religion_HRJobApplications">
+          <DataField>Religion_HRJobApplications</DataField>
+        </Field>
+        <Field Name="PersonLivingWithDisability_HRJobApplications">
+          <DataField>PersonLivingWithDisability_HRJobApplications</DataField>
+        </Field>
+        <Field Name="EthnicGroup_HRJobApplications">
+          <DataField>EthnicGroup_HRJobApplications</DataField>
+        </Field>
+        <Field Name="EmplymtContractCode_HRJobApplications">
+          <DataField>EmplymtContractCode_HRJobApplications</DataField>
+        </Field>
+        <Field Name="EmailAddress_HRJobApplications">
+          <DataField>EmailAddress_HRJobApplications</DataField>
+        </Field>
+        <Field Name="HudumaNo_HRJobApplications">
+          <DataField>HudumaNo_HRJobApplications</DataField>
+        </Field>
+        <Field Name="PINNo_HRJobApplications">
+          <DataField>PINNo_HRJobApplications</DataField>
+        </Field>
+        <Field Name="NHIFNo_HRJobApplications">
+          <DataField>NHIFNo_HRJobApplications</DataField>
+        </Field>
+        <Field Name="NSSFNo_HRJobApplications">
+          <DataField>NSSFNo_HRJobApplications</DataField>
+        </Field>
+        <Field Name="ApplicationDate_HRJobApplications">
+          <DataField>ApplicationDate_HRJobApplications</DataField>
+        </Field>
+        <Field Name="JobNo_HRJobApplications">
+          <DataField>JobNo_HRJobApplications</DataField>
+        </Field>
+        <Field Name="JobTitle_HRJobApplications">
+          <DataField>JobTitle_HRJobApplications</DataField>
+        </Field>
+        <Field Name="EmpRequisitionDescription_HRJobApplications">
+          <DataField>EmpRequisitionDescription_HRJobApplications</DataField>
+        </Field>
+        <Field Name="JobGrade_HRJobApplications">
+          <DataField>JobGrade_HRJobApplications</DataField>
+        </Field>
+        <Field Name="Qualified_HRJobApplications">
+          <DataField>Qualified_HRJobApplications</DataField>
+        </Field>
+        <Field Name="ShortListed_HRJobApplications">
+          <DataField>ShortListed_HRJobApplications</DataField>
+        </Field>
+        <Field Name="SalaryNotch_HRJobApplications">
+          <DataField>SalaryNotch_HRJobApplications</DataField>
+        </Field>
+        <Field Name="Description_HRJobApplications">
+          <DataField>Description_HRJobApplications</DataField>
+        </Field>
+        <Field Name="GlobalDimension1Code_HRJobApplications">
+          <DataField>GlobalDimension1Code_HRJobApplications</DataField>
+        </Field>
+        <Field Name="GlobalDimension2Code_HRJobApplications">
+          <DataField>GlobalDimension2Code_HRJobApplications</DataField>
+        </Field>
+        <Field Name="ShortcutDimension3Code_HRJobApplications">
+          <DataField>ShortcutDimension3Code_HRJobApplications</DataField>
+        </Field>
+        <Field Name="ShortcutDimension4Code_HRJobApplications">
+          <DataField>ShortcutDimension4Code_HRJobApplications</DataField>
+        </Field>
+        <Field Name="ShortcutDimension5Code_HRJobApplications">
+          <DataField>ShortcutDimension5Code_HRJobApplications</DataField>
+        </Field>
+        <Field Name="ShortcutDimension6Code_HRJobApplications">
+          <DataField>ShortcutDimension6Code_HRJobApplications</DataField>
+        </Field>
+        <Field Name="ShortcutDimension7Code_HRJobApplications">
+          <DataField>ShortcutDimension7Code_HRJobApplications</DataField>
+        </Field>
+        <Field Name="ShortcutDimension8Code_HRJobApplications">
+          <DataField>ShortcutDimension8Code_HRJobApplications</DataField>
+        </Field>
+        <Field Name="ResponsibilityCenter_HRJobApplications">
+          <DataField>ResponsibilityCenter_HRJobApplications</DataField>
+        </Field>
+        <Field Name="CommitteeShortlisted_HRJobApplications">
+          <DataField>CommitteeShortlisted_HRJobApplications</DataField>
+        </Field>
+        <Field Name="InterviewDate_HRJobApplications">
+          <DataField>InterviewDate_HRJobApplications</DataField>
+        </Field>
+        <Field Name="InterviewTime_HRJobApplications">
+          <DataField>InterviewTime_HRJobApplications</DataField>
+        </Field>
+        <Field Name="InterviewLocation_HRJobApplications">
+          <DataField>InterviewLocation_HRJobApplications</DataField>
+        </Field>
+        <Field Name="Status_HRJobApplications">
+          <DataField>Status_HRJobApplications</DataField>
+        </Field>
+        <Field Name="PostAppliedCode_HRJobApplications">
+          <DataField>PostAppliedCode_HRJobApplications</DataField>
+        </Field>
+        <Field Name="PostAppliedDescription_HRJobApplications">
+          <DataField>PostAppliedDescription_HRJobApplications</DataField>
+        </Field>
+        <Field Name="UserID_HRJobApplications">
+          <DataField>UserID_HRJobApplications</DataField>
+        </Field>
+        <Field Name="NoSeries_HRJobApplications">
+          <DataField>NoSeries_HRJobApplications</DataField>
+        </Field>
+        <Field Name="IncomingDocumentEntryNo_HRJobApplications">
+          <DataField>IncomingDocumentEntryNo_HRJobApplications</DataField>
+        </Field>
+        <Field Name="NationalIdentityCard_HRJobApplications">
+          <DataField>NationalIdentityCard_HRJobApplications</DataField>
+        </Field>
+        <Field Name="PinCertificate_HRJobApplications">
+          <DataField>PinCertificate_HRJobApplications</DataField>
+        </Field>
+        <Field Name="NSSF_HRJobApplications">
+          <DataField>NSSF_HRJobApplications</DataField>
+        </Field>
+        <Field Name="NHIF_HRJobApplications">
+          <DataField>NHIF_HRJobApplications</DataField>
+        </Field>
+        <Field Name="CopyofATM_HRJobApplications">
+          <DataField>CopyofATM_HRJobApplications</DataField>
+        </Field>
+        <Field Name="AcademicCertsOriginal_HRJobApplications">
+          <DataField>AcademicCertsOriginal_HRJobApplications</DataField>
+        </Field>
+        <Field Name="V2PassportColoredPhotos_HRJobApplications">
+          <DataField>V2PassportColoredPhotos_HRJobApplications</DataField>
+        </Field>
+        <Field Name="HELBLoanStatusstatement_HRJobApplications">
+          <DataField>HELBLoanStatusstatement_HRJobApplications</DataField>
+        </Field>
+        <Field Name="EACCClearanceCert_HRJobApplications">
+          <DataField>EACCClearanceCert_HRJobApplications</DataField>
+        </Field>
+        <Field Name="GoodConductCert_HRJobApplications">
+          <DataField>GoodConductCert_HRJobApplications</DataField>
+        </Field>
+        <Field Name="TaxComplianceCert_HRJobApplications">
+          <DataField>TaxComplianceCert_HRJobApplications</DataField>
+        </Field>
+        <Field Name="CRBClearanceCert_HRJobApplications">
+          <DataField>CRBClearanceCert_HRJobApplications</DataField>
+        </Field>
+        <Field Name="CertofService_HRJobApplications">
+          <DataField>CertofService_HRJobApplications</DataField>
+        </Field>
+        <Field Name="BirthCertificate_HRJobApplications">
+          <DataField>BirthCertificate_HRJobApplications</DataField>
+        </Field>
+        <Field Name="EmployeeCreated_HRJobApplications">
+          <DataField>EmployeeCreated_HRJobApplications</DataField>
+        </Field>
+        <Field Name="TobeInterviewed_HRJobApplications">
+          <DataField>TobeInterviewed_HRJobApplications</DataField>
+        </Field>
+        <Field Name="HRSalaryNotch_HRJobApplications">
+          <DataField>HRSalaryNotch_HRJobApplications</DataField>
+        </Field>
+        <Field Name="PasswordResetToken_HRJobApplications">
+          <DataField>PasswordResetToken_HRJobApplications</DataField>
+        </Field>
+        <Field Name="PasswordResetTokenExpiry_HRJobApplications">
+          <DataField>PasswordResetTokenExpiry_HRJobApplications</DataField>
+        </Field>
+        <Field Name="PortalPassword_HRJobApplications">
+          <DataField>PortalPassword_HRJobApplications</DataField>
+        </Field>
+        <Field Name="DefaultPortalPassword_HRJobApplications">
+          <DataField>DefaultPortalPassword_HRJobApplications</DataField>
+        </Field>
+        <Field Name="BankCode_HRJobApplications">
+          <DataField>BankCode_HRJobApplications</DataField>
+        </Field>
+        <Field Name="BankName_HRJobApplications">
+          <DataField>BankName_HRJobApplications</DataField>
+        </Field>
+        <Field Name="BankBranchCode_HRJobApplications">
+          <DataField>BankBranchCode_HRJobApplications</DataField>
+        </Field>
+        <Field Name="BankBranchName_HRJobApplications">
+          <DataField>BankBranchName_HRJobApplications</DataField>
+        </Field>
+        <Field Name="ContractStartDate_HRJobApplications">
+          <DataField>ContractStartDate_HRJobApplications</DataField>
+        </Field>
+        <Field Name="ProbationStartDate_HRJobApplications">
+          <DataField>ProbationStartDate_HRJobApplications</DataField>
+        </Field>
+        <Field Name="ProbationPeriod_HRJobApplications">
+          <DataField>ProbationPeriod_HRJobApplications</DataField>
+        </Field>
+        <Field Name="ProbationEnddate_HRJobApplications">
+          <DataField>ProbationEnddate_HRJobApplications</DataField>
+        </Field>
+        <Field Name="CEOMeetingDate_HRJobApplications">
+          <DataField>CEOMeetingDate_HRJobApplications</DataField>
+        </Field>
+        <Field Name="CEOMeetingTime_HRJobApplications">
+          <DataField>CEOMeetingTime_HRJobApplications</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

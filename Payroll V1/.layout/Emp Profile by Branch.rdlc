@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="PageTxt_________FORMAT_CurrReport_PAGENO_">
+          <DataField>PageTxt_________FORMAT_CurrReport_PAGENO_</DataField>
+        </Field>
+        <Field Name="COMPANYNAME">
+          <DataField>COMPANYNAME</DataField>
+        </Field>
+        <Field Name="FORMAT_TODAY_0_4_">
+          <DataField>FORMAT_TODAY_0_4_</DataField>
+        </Field>
+        <Field Name="PRINTED_ON_________FORMAT__TODAY_">
+          <DataField>PRINTED_ON_________FORMAT__TODAY_</DataField>
+        </Field>
+        <Field Name="PRINTED_BY_________FORMAT_USERID_">
+          <DataField>PRINTED_BY_________FORMAT_USERID_</DataField>
+        </Field>
+        <Field Name="PRINTED_AT_________FORMAT_TIME_">
+          <DataField>PRINTED_AT_________FORMAT_TIME_</DataField>
+        </Field>
+        <Field Name="Employee_Employee__Global_Dimension_1_Code_">
+          <DataField>Employee_Employee__Global_Dimension_1_Code_</DataField>
+        </Field>
+        <Field Name="DeptName">
+          <DataField>DeptName</DataField>
+        </Field>
+        <Field Name="Employee_Employee__Global_Dimension_1_Code__Control1101951009">
+          <DataField>Employee_Employee__Global_Dimension_1_Code__Control1101951009</DataField>
+        </Field>
+        <Field Name="Employee__No__">
+          <DataField>Employee__No__</DataField>
+        </Field>
+        <Field Name="First_Name__________Middle_Name_">
+          <DataField>First_Name__________Middle_Name_</DataField>
+        </Field>
+        <Field Name="Employee__Last_Name_">
+          <DataField>Employee__Last_Name_</DataField>
+        </Field>
+        <Field Name="NO__OF_EMPLOYEES____________FORMAT_EmpCount_">
+          <DataField>NO__OF_EMPLOYEES____________FORMAT_EmpCount_</DataField>
+        </Field>
+        <Field Name="MitarbeiterCaption">
+          <DataField>MitarbeiterCaption</DataField>
+        </Field>
+        <Field Name="Employee_Employee__Global_Dimension_1_Code__Control1101951009Caption">
+          <DataField>Employee_Employee__Global_Dimension_1_Code__Control1101951009Caption</DataField>
+        </Field>
+        <Field Name="Employee__No__Caption">
+          <DataField>Employee__No__Caption</DataField>
+        </Field>
+        <Field Name="Other_NamesCaption">
+          <DataField>Other_NamesCaption</DataField>
+        </Field>
+        <Field Name="SurNameCaption">
+          <DataField>SurNameCaption</DataField>
+        </Field>
+        <Field Name="Employee_Employee__Global_Dimension_1_Code_Caption">
+          <DataField>Employee_Employee__Global_Dimension_1_Code_Caption</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

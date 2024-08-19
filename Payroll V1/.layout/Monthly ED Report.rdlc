@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="USERID">
+          <DataField>USERID</DataField>
+        </Field>
+        <Field Name="COMPANYNAME">
+          <DataField>COMPANYNAME</DataField>
+        </Field>
+        <Field Name="TitleText">
+          <DataField>TitleText</DataField>
+        </Field>
+        <Field Name="FORMAT_TODAY_0_4_">
+          <DataField>FORMAT_TODAY_0_4_</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENO">
+          <DataField>CurrReport_PAGENO</DataField>
+        </Field>
+        <Field Name="Employee_No__">
+          <DataField>Employee_No__</DataField>
+        </Field>
+        <Field Name="Employee_Name_">
+          <DataField>Employee_Name_</DataField>
+        </Field>
+        <Field Name="Payroll_Lines__Amount__LCY__">
+          <DataField>Payroll_Lines__Amount__LCY__</DataField>
+        </Field>
+        <Field Name="Payroll_Lines__Amount__LCY__Format">
+          <DataField>Payroll_Lines__Amount__LCY__Format</DataField>
+        </Field>
+        <Field Name="gvBranch">
+          <DataField>gvBranch</DataField>
+        </Field>
+        <Field Name="gvDepartment">
+          <DataField>gvDepartment</DataField>
+        </Field>
+        <Field Name="Payroll_Lines__Employee_No__">
+          <DataField>Payroll_Lines__Employee_No__</DataField>
+        </Field>
+        <Field Name="Payroll_Lines__Amount__LCY___Control11">
+          <DataField>Payroll_Lines__Amount__LCY___Control11</DataField>
+        </Field>
+        <Field Name="Payroll_Lines__Amount__LCY___Control11Format">
+          <DataField>Payroll_Lines__Amount__LCY___Control11Format</DataField>
+        </Field>
+        <Field Name="Name">
+          <DataField>Name</DataField>
+        </Field>
+        <Field Name="Payroll_Lines_Quantity">
+          <DataField>Payroll_Lines_Quantity</DataField>
+        </Field>
+        <Field Name="Payroll_Lines_QuantityFormat">
+          <DataField>Payroll_Lines_QuantityFormat</DataField>
+        </Field>
+        <Field Name="Payroll_Lines_Rate">
+          <DataField>Payroll_Lines_Rate</DataField>
+        </Field>
+        <Field Name="Payroll_Lines_RateFormat">
+          <DataField>Payroll_Lines_RateFormat</DataField>
+        </Field>
+        <Field Name="NationalID">
+          <DataField>NationalID</DataField>
+        </Field>
+        <Field Name="Payroll_Lines__Amount__LCY___Control1000000007">
+          <DataField>Payroll_Lines__Amount__LCY___Control1000000007</DataField>
+        </Field>
+        <Field Name="Payroll_Lines__Amount__LCY___Control1000000007Format">
+          <DataField>Payroll_Lines__Amount__LCY___Control1000000007Format</DataField>
+        </Field>
+        <Field Name="Payroll_Lines__Amount__LCY___Control31">
+          <DataField>Payroll_Lines__Amount__LCY___Control31</DataField>
+        </Field>
+        <Field Name="Payroll_Lines__Amount__LCY___Control31Format">
+          <DataField>Payroll_Lines__Amount__LCY___Control31Format</DataField>
+        </Field>
+        <Field Name="TotalAmount">
+          <DataField>TotalAmount</DataField>
+        </Field>
+        <Field Name="TotalAmountFormat">
+          <DataField>TotalAmountFormat</DataField>
+        </Field>
+        <Field Name="Totalhours">
+          <DataField>Totalhours</DataField>
+        </Field>
+        <Field Name="TotalhoursFormat">
+          <DataField>TotalhoursFormat</DataField>
+        </Field>
+        <Field Name="EmpCount">
+          <DataField>EmpCount</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENOCaption">
+          <DataField>CurrReport_PAGENOCaption</DataField>
+        </Field>
+        <Field Name="QtyCaption">
+          <DataField>QtyCaption</DataField>
+        </Field>
+        <Field Name="RateCaption">
+          <DataField>RateCaption</DataField>
+        </Field>
+        <Field Name="Amount__LCY_Caption">
+          <DataField>Amount__LCY_Caption</DataField>
+        </Field>
+        <Field Name="ID_No_Caption">
+          <DataField>ID_No_Caption</DataField>
+        </Field>
+        <Field Name="Payroll_Lines__Amount__LCY__Caption">
+          <DataField>Payroll_Lines__Amount__LCY__Caption</DataField>
+        </Field>
+        <Field Name="Payroll_Lines__Amount__LCY___Control31Caption">
+          <DataField>Payroll_Lines__Amount__LCY___Control31Caption</DataField>
+        </Field>
+        <Field Name="TotalAmountCaption">
+          <DataField>TotalAmountCaption</DataField>
+        </Field>
+        <Field Name="EmpCountCaption">
+          <DataField>EmpCountCaption</DataField>
+        </Field>
+        <Field Name="Payroll_Lines_Entry_No_">
+          <DataField>Payroll_Lines_Entry_No_</DataField>
+        </Field>
+        <Field Name="Payroll_Lines_Global_Dimension_1_Code">
+          <DataField>Payroll_Lines_Global_Dimension_1_Code</DataField>
+        </Field>
+        <Field Name="Payroll_Lines_Global_Dimension_2_Code">
+          <DataField>Payroll_Lines_Global_Dimension_2_Code</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>
